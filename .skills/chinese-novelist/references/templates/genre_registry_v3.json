@@ -1,0 +1,379 @@
+{
+  "meta": {
+    "version": "3.2.0",
+    "updated": "2026-03-01",
+    "description": "单一事实来源 (SSOT)：Chinese Novelist Pro 全流派注册表",
+    "coverage_target": "99%"
+  },
+  "categories": {
+    "male_mainstream": "男频主流",
+    "urban_modern": "都市/现代",
+    "scifi_future": "科幻/未来",
+    "suspense_thriller": "悬疑/惊悚",
+    "female_channel": "女频",
+    "special_niche": "特殊/垂直"
+  },
+  "genre_packs": {
+    "xuanhuan": {
+      "name": "玄幻流",
+      "category": "male_mainstream",
+      "file": "style-exemplars/xuanhuan.md",
+      "hooks": [
+        "action-scene-guide.md",
+        "sensory-library.md"
+      ],
+      "description": "热血升级，异世大陆，强者为尊"
+    },
+    "xianxia": {
+      "name": "仙侠流",
+      "category": "male_mainstream",
+      "file": "style-exemplars/xianxia.md",
+      "hooks": [
+        "action-scene-guide.md",
+        "sensory-library.md"
+      ],
+      "description": "修真求道，长生久视，法宝丹药"
+    },
+    "fanren": {
+      "name": "凡人流",
+      "category": "male_mainstream",
+      "file": "style-exemplars/fanren.md",
+      "hooks": [
+        "action-scene-guide.md",
+        "sensory-library.md"
+      ],
+      "description": "资质平庸，谨慎修仙，杀人夺宝"
+    },
+    "honghuang": {
+      "name": "洪荒流",
+      "category": "male_mainstream",
+      "file": "style-exemplars/honghuang.md",
+      "hooks": [
+        "action-scene-guide.md",
+        "mythology-integration.md"
+      ],
+      "description": "圣人算计，因果循环，天地大劫"
+    },
+    "wuxia": {
+      "name": "传统武侠",
+      "category": "male_mainstream",
+      "file": "style-exemplars/wuxia.md",
+      "hooks": [
+        "action-scene-guide.md",
+        "historical-context.md"
+      ],
+      "description": "江湖恩怨，家国情怀，侠之大者"
+    },
+    "urban_supernatural": {
+      "name": "都市异能",
+      "category": "urban_modern",
+      "file": "style-exemplars/urban-supernatural.md",
+      "hooks": [
+        "action-scene-guide.md",
+        "urban-setting.md"
+      ],
+      "description": "灵气复苏，异能觉醒，守护城市"
+    },
+    "shenhao": {
+      "name": "神豪流",
+      "category": "urban_modern",
+      "file": "style-exemplars/shenhao.md",
+      "hooks": [
+        "golden-three-chapters.md",
+        "spending-hooks.md"
+      ],
+      "description": "无限金钱，报复消费，打脸势利眼"
+    },
+    "entertainment": {
+      "name": "文娱明星",
+      "category": "urban_modern",
+      "file": "style-exemplars/entertainment.md",
+      "hooks": [
+        "audience-reaction.md",
+        "copying-logic.md"
+      ],
+      "description": "抄歌抄书，巨星之路，全网震惊"
+    },
+    "realistic_industry": {
+      "name": "现实行业",
+      "category": "urban_modern",
+      "file": "style-exemplars/realistic-industry.md",
+      "hooks": [
+        "industry-knowledge.md",
+        "clutch-performance.md"
+      ],
+      "description": "职场精英，专业技能，行业揭秘"
+    },
+    "period_drama": {
+      "name": "年代文",
+      "category": "urban_modern",
+      "file": "style-exemplars/period-drama.md",
+      "hooks": [
+        "era-bonus.md",
+        "family-conflict.md"
+      ],
+      "description": "重回过去，发家致富，弥补遗憾"
+    },
+    "scifi": {
+      "name": "科幻星际",
+      "category": "scifi_future",
+      "file": "style-exemplars/scifi.md",
+      "hooks": [
+        "tech-description.md",
+        "space-opera.md"
+      ],
+      "description": "星际文明，机甲战舰，宇宙探索"
+    },
+    "cypher": {
+      "name": "赛博朋克",
+      "category": "scifi_future",
+      "file": "style-exemplars/cypher.md",
+      "hooks": [
+        "high-tech-low-life.md",
+        "action-scene-guide.md"
+      ],
+      "description": "高科技低生活，霓虹雨夜，义体改造"
+    },
+    "system_litrpg": {
+      "name": "系统流",
+      "category": "scifi_future",
+      "file": "style-exemplars/system-litrpg.md",
+      "hooks": [
+        "system-panel.md",
+        "gamification.md"
+      ],
+      "description": "数据面板，任务发布，加点升级"
+    },
+    "wasteland": {
+      "name": "末日废土",
+      "category": "scifi_future",
+      "file": "style-exemplars/wasteland.md",
+      "hooks": [
+        "survival-guide.md",
+        "resource-economy.md"
+      ],
+      "description": "文明崩塌，资源匮乏，人性考验"
+    },
+    "cthulhu": {
+      "name": "克苏鲁",
+      "category": "suspense_thriller",
+      "file": "style-exemplars/cthulhu.md",
+      "hooks": [
+        "sanity-check.md",
+        "unknown-fear.md"
+      ],
+      "description": "不可名状，san值狂掉，古神低语"
+    },
+    "rule_horror": {
+      "name": "规则怪谈",
+      "category": "suspense_thriller",
+      "file": "style-exemplars/rule-horror.md",
+      "hooks": [
+        "logic-puzzle.md",
+        "tension-building.md"
+      ],
+      "description": "遵守规则，逻辑推理，生死一线"
+    },
+    "infinite_flow": {
+      "name": "无限流",
+      "category": "suspense_thriller",
+      "file": "style-exemplars/infinite-flow.md",
+      "hooks": [
+        "world-hopping.md",
+        "team-dynamics.md"
+      ],
+      "description": "主神空间，副本任务，团队求生"
+    },
+    "national_fate": {
+      "name": "国运直播",
+      "category": "suspense_thriller",
+      "file": "style-exemplars/national-fate.md",
+      "hooks": [
+        "danmu-reaction.md",
+        "national-pride.md"
+      ],
+      "description": "绑定国运，全民直播，荣辱与共"
+    },
+    "detective": {
+      "name": "刑侦悬疑",
+      "category": "suspense_thriller",
+      "file": "style-exemplars/detective.md",
+      "hooks": [
+        "clue-dropping.md",
+        "logical-twist.md"
+      ],
+      "description": "硬核推理，破案追凶，逻辑反转"
+    },
+    "historical": {
+      "name": "历史穿越",
+      "category": "special_niche",
+      "file": "style-exemplars/historical.md",
+      "hooks": [
+        "historical-context.md",
+        "political-intrigue.md"
+      ],
+      "description": "穿越古代，科技碾压，朝堂权谋"
+    },
+    "romance": {
+      "name": "古言/女频",
+      "category": "female_channel",
+      "file": "style-exemplars/romance.md",
+      "hooks": [
+        "romance-scene-guide.md",
+        "emotional-beats.md"
+      ],
+      "description": "古代言情，宅斗宫斗，情有独钟"
+    },
+    "modern_romance": {
+      "name": "现代言情",
+      "category": "female_channel",
+      "file": "style-exemplars/modern-romance.md",
+      "hooks": [
+        "romance-scene-guide.md",
+        "sweet-moments.md"
+      ],
+      "description": "都市甜宠，霸道总裁，破镜重圆"
+    },
+    "palace_drama": {
+      "name": "古代宫斗",
+      "category": "female_channel",
+      "file": "style-exemplars/palace-drama.md",
+      "hooks": [
+        "dialogue-subtext.md",
+        "power-struggle.md"
+      ],
+      "description": "后宫争宠，步步惊心，权谋算计"
+    },
+    "quick_transmigration": {
+      "name": "快穿攻略",
+      "category": "female_channel",
+      "file": "style-exemplars/quick-transmigration.md",
+      "hooks": [
+        "system-panel.md",
+        "face-slapping.md"
+      ],
+      "description": "系统任务，位面穿梭，攻略男主"
+    },
+    "group_pet": {
+      "name": "团宠萌宝",
+      "category": "female_channel",
+      "file": "style-exemplars/group-pet.md",
+      "hooks": [
+        "cute-moments.md",
+        "doting-family.md"
+      ],
+      "description": "全家宠爱，锦鲤体质，治愈萌宝"
+    },
+    "danmei": {
+      "name": "耽美/BL",
+      "category": "female_channel",
+      "file": "style-exemplars/danmei-bl.md",
+      "hooks": [
+        "emotional-buildup.md",
+        "relationship-arc.md"
+      ],
+      "description": "纯爱无言，强强联手，情感羁绊"
+    },
+    "light_novel": {
+      "name": "轻小说",
+      "category": "special_niche",
+      "file": "style-exemplars/light-novel.md",
+      "hooks": [
+        "character-tropes.md",
+        "relaxed-tone.md"
+      ],
+      "description": "日系风格，轻松吐槽，二次元"
+    },
+    "gaming": {
+      "name": "游戏电竞",
+      "category": "special_niche",
+      "file": "style-exemplars/gaming.md",
+      "hooks": [
+        "game-mechanics.md",
+        "match-commentary.md"
+      ],
+      "description": "虚拟网游，电子竞技，技术流"
+    },
+    "sports": {
+      "name": "体育竞技",
+      "category": "special_niche",
+      "file": "style-exemplars/sports-fiction.md",
+      "hooks": [
+        "match-tension.md",
+        "training-montage.md"
+      ],
+      "description": "热血竞技，团队合作，冠军之路"
+    },
+    "short_fiction": {
+      "name": "短篇/微小说",
+      "category": "special_niche",
+      "file": "style-exemplars/short-fiction.md",
+      "hooks": [
+        "logical-twist.md",
+        "concise-writing.md"
+      ],
+      "description": "脑洞大开，反转结局，短小精悍"
+    },
+    "comedy": {
+      "name": "喜剧/讽刺",
+      "category": "special_niche",
+      "file": "style-exemplars/comedy-satire.md",
+      "hooks": [
+        "humor-timing.md",
+        "absurdity.md"
+      ],
+      "description": "轻松搞笑，反套路，讽刺现实"
+    },
+    "military": {
+      "name": "军事/谍战",
+      "category": "special_niche",
+      "file": "style-exemplars/military-spy.md",
+      "hooks": [
+        "military-tactics.md",
+        "suspense-building.md"
+      ],
+      "description": "铁血军旅，情报暗战，家国大义"
+    },
+    "zhutian": {
+      "name": "诸天流",
+      "category": "special_niche",
+      "file": "style-exemplars/zhutian.md",
+      "hooks": [
+        "world-building-rules.md",
+        "power-system.md"
+      ],
+      "description": "诸天万界，位面掠夺，唯我独尊"
+    },
+    "farming": {
+      "name": "种田/领主",
+      "category": "special_niche",
+      "file": "style-exemplars/farming.md",
+      "hooks": [
+        "kingdom-building.md",
+        "resource-management.md"
+      ],
+      "description": "经营建设，科技攀升，从零开始"
+    },
+    "psychological": {
+      "name": "心理惊悚",
+      "category": "suspense_thriller",
+      "file": "style-exemplars/psychological-horror.md",
+      "hooks": [
+        "unreliable-narrator.md",
+        "inner-conflict.md"
+      ],
+      "description": "心理博弈，精神恐惧，人性深渊"
+    },
+    "folk_horror": {
+      "name": "民俗志怪恐怖",
+      "category": "suspense_thriller",
+      "file": "style-exemplars/folk-horror.md",
+      "hooks": [
+        "folk-customs.md",
+        "ritual-horror.md",
+        "unknown-fear.md"
+      ],
+      "description": "中式民俗，禁忌仪式，因果追债，乡野惊悚"
+    }
+  }
+}

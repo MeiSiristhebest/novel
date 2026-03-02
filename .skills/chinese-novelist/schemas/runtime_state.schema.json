@@ -1,0 +1,85 @@
+{
+  "": "urn:chinese-novelist:schema:runtime_state.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chinese-novelist/runtime_state.schema.json",
+  "title": "Runner Runtime State",
+  "type": "object",
+  "required": [
+    "pipeline",
+    "next_role",
+    "iteration",
+    "current_chapter",
+    "last_gate_results",
+    "last_error"
+  ],
+  "properties": {
+    "pipeline": {
+      "type": "string",
+      "enum": [
+        "five-role",
+        "writer-qa"
+      ]
+    },
+    "next_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "iteration": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "current_chapter": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_gate_results": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "passed",
+          "blocking",
+          "message"
+        ],
+        "properties": {
+          "passed": {
+            "type": "boolean"
+          },
+          "blocking": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "last_error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "last_role": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1"
+    }
+  },
+  "additionalProperties": true,
+  "examples": [
+    {
+      "schema_version": "1",
+      "pipeline": "writer-qa",
+      "next_role": "writer",
+      "iteration": 3,
+      "current_chapter": 8,
+      "last_gate_results": {},
+      "last_error": null,
+      "last_role": "qa"
+    }
+  ]
+}

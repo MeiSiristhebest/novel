@@ -1,0 +1,51 @@
+{
+  "": "urn:chinese-novelist:schema:phase5_sync_trace.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chinese-novelist/phase5_sync_trace.schema.json",
+  "title": "Phase 5 Sync Trace",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "synced",
+    "na"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1"
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "synced": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "na": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "examples": [
+    {
+      "schema_version": "1",
+      "generated_at": "2026-03-02 10:40:00",
+      "synced": {
+        "07-项目状态.md": true,
+        ".context/VOLUME_XX.md": true,
+        "03-分章细纲.md": true,
+        "04-伏笔追踪表.md": true,
+        "05-时间线.md": true,
+        "06-细节追踪表.md": true
+      },
+      "na": []
+    }
+  ]
+}

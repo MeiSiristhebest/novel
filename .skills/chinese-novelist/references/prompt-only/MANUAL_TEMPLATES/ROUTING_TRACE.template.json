@@ -1,0 +1,19 @@
+{
+  "generated_at": "YYYY-MM-DD HH:mm:ss",
+  "role": "writer",
+  "chapter_num": 1,
+  "chapter_id": "CH01",
+  "scene_types": ["日常生活"],
+  "genre": "xuanhuan",
+  "required_files": [],
+  "selected_files": [],
+  "deferred_files": [],
+  "missing_files": [],
+  "batches": [
+    {
+      "batch": 1,
+      "files": []
+    }
+  ],
+  "selection_reason": {}
+}

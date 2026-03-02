@@ -1,0 +1,9 @@
+{
+  "pipeline": "writer-qa",
+  "next_role": "writer",
+  "iteration": 0,
+  "current_chapter": 0,
+  "last_gate_results": {},
+  "last_error": null,
+  "last_role": "initializer"
+}

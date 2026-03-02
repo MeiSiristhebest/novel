@@ -1,0 +1,298 @@
+{
+  "": "urn:chinese-novelist:schema:routing_trace.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chinese-novelist/routing_trace.schema.json",
+  "title": "Routing Trace",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "role",
+    "chapter_num",
+    "chapter_id",
+    "scene_types",
+    "genre",
+    "chapter_mode",
+    "required_files",
+    "loaded_files",
+    "missing_files",
+    "deferred_files",
+    "engine_files",
+    "style_exemplar",
+    "security_mode"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1"
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chapter_num": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "chapter_id": {
+      "type": "string",
+      "pattern": "^CH\\d{2,4}$"
+    },
+    "scene_types": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "genre": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chapter_mode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "engine_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "engine_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "style_exemplar": {
+      "type": "string"
+    },
+    "required_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "loaded_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deferred_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "batches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "batch",
+          "files",
+          "char_count"
+        ],
+        "properties": {
+          "batch": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "char_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "selection_reason": {
+      "type": "string"
+    },
+    "selection_score": {
+      "type": [
+        "number",
+        "integer"
+      ]
+    },
+    "routing_max_chars": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "language_pack_status": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "passed"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        {
+          "type": "object",
+          "required": [
+            "required",
+            "loaded",
+            "missing",
+            "passed"
+          ],
+          "properties": {
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "loaded": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "missing": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "passed": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "phase5_sync_status": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "required": [
+            "passed",
+            "message"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "security_mode": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true,
+  "examples": [
+    {
+      "schema_version": "1",
+      "generated_at": "2026-03-02 10:05:00",
+      "role": "writer",
+      "chapter_num": 8,
+      "chapter_id": "CH08",
+      "scene_types": [
+        "悬疑",
+        "动作"
+      ],
+      "genre": "detective",
+      "chapter_mode": "DEVELOPMENT",
+      "engine_types": [],
+      "engine_files": [],
+      "style_exemplar": "references/style-exemplars/detective.md",
+      "required_files": [
+        "references/quality/ai-guardrails.md",
+        "references/guides/language-craft.md",
+        "references/guides/show-dont-tell.md",
+        "references/style-exemplars/detective.md"
+      ],
+      "selected_files": [
+        "references/hooks/sanity-check.md"
+      ],
+      "loaded_files": [
+        "references/quality/ai-guardrails.md",
+        "references/guides/language-craft.md",
+        "references/guides/show-dont-tell.md",
+        "references/style-exemplars/detective.md",
+        "references/hooks/sanity-check.md"
+      ],
+      "deferred_files": [],
+      "missing_files": [],
+      "batches": [
+        {
+          "batch": 1,
+          "files": [
+            "references/hooks/sanity-check.md"
+          ],
+          "char_count": 1200
+        }
+      ],
+      "selection_reason": {
+        "references/hooks/sanity-check.md": "scene_types match"
+      },
+      "selection_score": {
+        "references/hooks/sanity-check.md": 0.9
+      },
+      "routing_max_chars": 12000,
+      "language_pack_status": {
+        "required": [
+          "references/quality/ai-guardrails.md",
+          "references/guides/language-craft.md",
+          "references/guides/show-dont-tell.md",
+          "references/style-exemplars/detective.md"
+        ],
+        "loaded": [
+          "references/quality/ai-guardrails.md",
+          "references/guides/language-craft.md",
+          "references/guides/show-dont-tell.md",
+          "references/style-exemplars/detective.md"
+        ],
+        "missing": [],
+        "passed": true
+      },
+      "phase5_sync_status": "pending",
+      "security_mode": "default"
+    }
+  ]
+}

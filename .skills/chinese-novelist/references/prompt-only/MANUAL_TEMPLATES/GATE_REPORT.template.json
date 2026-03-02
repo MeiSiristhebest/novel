@@ -1,0 +1,14 @@
+{
+  "chapter_id": "CH01",
+  "all_passed": false,
+  "blocking_failure": "gate_name_or_null",
+  "gates": [
+    {
+      "gate_name": "gate_scene_schema",
+      "passed": true,
+      "blocking": true,
+      "message": "scene_list schema ok",
+      "evidence": []
+    }
+  ]
+}

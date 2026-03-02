@@ -1,0 +1,22 @@
+[
+  {
+    "id": "CH01",
+    "title": "第1章: (章节名)",
+    "chapter_num": 1,
+    "volume": 1,
+    "chapter_mode": "OPENING",
+    "outline_summary": "(从03-分章细纲.md提取)",
+    "scene_types": ["日常生活"],
+    "emotional_target": "(读者读完应感到什么)",
+    "acceptance": [
+      "主角目标清晰",
+      "核心冲突已建立",
+      "章末有悬念钩子",
+      "无AI禁用词",
+      "POV一致"
+    ],
+    "chapter_file": "drafts/chapter_01.md",
+    "passes": false,
+    "schema_version": "1"
+  }
+]

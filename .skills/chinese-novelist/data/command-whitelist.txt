@@ -1,0 +1,22 @@
+# Chinese Novelist command whitelist
+#
+# This file controls the `command` LLM backend in tools/novel_agent_runner.py.
+#
+# Supported formats:
+# - Legacy: a single token (e.g. `python`) allows by executable name only.
+# - Recommended: a full prefix (e.g. `pwsh -NoProfile -File`) enables strict prefix matching.
+#
+# Best practice:
+# - Avoid allowing interactive shells (`pwsh`, `powershell`, `bash`, `sh`) unless you fully pin the prefix.
+# - Prefer dedicated wrappers/scripts instead of arbitrary command execution.
+python
+python3
+bash
+sh
+pwsh
+powershell
+node
+npm
+npx
+uv
+

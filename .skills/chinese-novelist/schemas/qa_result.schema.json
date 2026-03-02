@@ -1,0 +1,65 @@
+{
+  "": "urn:chinese-novelist:schema:qa_result.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chinese-novelist/qa_result.schema.json",
+  "title": "QA Result",
+  "type": "object",
+  "required": [
+    "chapter",
+    "chapter_title",
+    "hard_issues",
+    "soft_issues",
+    "result"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1"
+    },
+    "chapter": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chapter_title": {
+      "type": "string"
+    },
+    "hard_issues": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "soft_issues": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "WARN"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "qa_time": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "examples": [
+    {
+      "schema_version": "1",
+      "chapter": "CH08",
+      "chapter_title": "第8章: (章节名)",
+      "result": "PASS",
+      "hard_issues": 0,
+      "soft_issues": 2,
+      "notes": "结构与钩子合格，建议加强环境细节与潜台词。",
+      "qa_time": "2026-03-02 10:00:00"
+    }
+  ]
+}

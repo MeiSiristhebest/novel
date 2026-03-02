@@ -1,0 +1,28 @@
+{
+  "project_name": "",
+  "created_at": "",
+  "current_stage": "PLANNING",
+  "stage_history": [],
+  "aesthetic_charter": {
+    "signed": false,
+    "signed_date": null,
+    "core_values": []
+  },
+  "progress": {
+    "current_chapter": 0,
+    "total_words": 0,
+    "last_updated": ""
+  },
+  "quality_gate": {
+    "last_review_score": 0,
+    "critical_issues_count": 0,
+    "editor_approval": false
+  },
+  "stages_definition": {
+    "PLANNING": "策划期：核心概念、大纲、人设、世界观构建",
+    "DRAFTING": "粗稿期：速度优先，允许粗糙，禁止精修，完成每日字数",
+    "REVISING": "修订期：结构调整，逻辑修复，伏笔回收，禁止开新章",
+    "POLISHING": "打磨期：逐字逐句，五感强化，金句提炼，去AI味",
+    "PUBLISHING": "发布期：最终定稿，分章上传，读者反馈收集"
+  }
+}

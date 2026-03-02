@@ -1,0 +1,125 @@
+{
+  "": "urn:chinese-novelist:schema:scene_list.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chinese-novelist/scene_list.schema.json",
+  "title": "Scene List",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "chapter_num",
+      "volume",
+      "chapter_mode",
+      "outline_summary",
+      "scene_types",
+      "emotional_target",
+      "acceptance",
+      "chapter_file",
+      "passes"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^CH\\d{2,4}$"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "chapter_num": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "volume": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "chapter_mode": {
+        "type": "string",
+        "enum": [
+          "OPENING",
+          "DEVELOPMENT",
+          "CLIMAX",
+          "BRIDGE"
+        ]
+      },
+      "outline_summary": {
+        "type": "string",
+        "minLength": 1
+      },
+      "scene_types": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "enum": [
+            "动作战斗",
+            "情感戏",
+            "打脸场景",
+            "家族斗争",
+            "突破晋级",
+            "关键对话",
+            "生死危机",
+            "日常生活",
+            "比赛竞技",
+            "群像团战",
+            "副本探险",
+            "商战权谋"
+          ]
+        }
+      },
+      "emotional_target": {
+        "type": "string",
+        "minLength": 1
+      },
+      "acceptance": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "chapter_file": {
+        "type": "string",
+        "pattern": "^drafts/chapter_\\d{2,4}\\.md$"
+      },
+      "passes": {
+        "type": "boolean"
+      },
+      "schema_version": {
+        "type": "string",
+        "const": "1"
+      }
+    },
+    "additionalProperties": true
+  },
+  "examples": [
+    [
+      {
+        "schema_version": "1",
+        "id": "CH01",
+        "title": "第1章: 雨夜来客",
+        "chapter_num": 1,
+        "volume": 1,
+        "chapter_mode": "OPENING",
+        "outline_summary": "主角在雨夜遭遇异常访客，埋下主线悬念。",
+        "scene_types": [
+          "悬疑",
+          "对话交锋"
+        ],
+        "emotional_target": "不安与好奇",
+        "acceptance": [
+          "主角目标清晰",
+          "核心冲突已建立",
+          "章末有悬念钩子"
+        ],
+        "chapter_file": "drafts/chapter_01.md",
+        "passes": false
+      }
+    ]
+  ]
+}

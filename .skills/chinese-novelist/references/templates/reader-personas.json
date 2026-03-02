@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "description": "Simulated reader personas for feedback generation"
+  },
+  "personas": {
+    "skimmer": {
+      "name": "一目十行怪 (The Skimmer)",
+      "focus": "Pacing & Formatting",
+      "traits": [
+        "讨厌超过3行的段落",
+        "跳过所有环境描写",
+        "只看对话和动作",
+        "如果300字没剧情推进就弃书"
+      ],
+      "triggers": {
+        "long_paragraph": "太长不看，排版劝退！",
+        "slow_pace": "水字数？这章讲了什么？",
+        "complex_desc": "跳过跳过，直接说结果。"
+      }
+    },
+    "logic_police": {
+      "name": "逻辑杠精 (The Logic Police)",
+      "focus": "Consistency & Plausibility",
+      "traits": [
+        "拿着放大镜找BUG",
+        "记忆力极好，记得第1章的设定",
+        "痛恨战力崩坏",
+        "痛恨反派降智"
+      ],
+      "triggers": {
+        "ooc": "主角人设崩了啊，之前不是说性格谨慎吗？",
+        "plot_hole": "等等，这也太巧合了吧？作者强行喂饭？",
+        "system_bug": "数据对不上啊，上一章还是练气三层。"
+      }
+    },
+    "shuang_addict": {
+      "name": "爽文成瘾者 (Dopamine Junkie)",
+      "focus": "Payoff & Emotions",
+      "traits": [
+        "极其缺乏耐心",
+        "只想看打脸和装逼",
+        "讨厌憋屈",
+        "讨厌圣母"
+      ],
+      "triggers": {
+        "delayed_gratification": "憋屈！主角为什么不直接杀了他？",
+        "weak_mc": "主角太怂了，溜了溜了。",
+        "good_payoff": "爽！这就对了！打赏走起！"
+      }
+    },
+    "cp_fan": {
+      "name": "嗑学家 (The Shipper)",
+      "focus": "Romance & Interaction",
+      "traits": [
+        "拿着显微镜找糖",
+        "只关心男女主互动",
+        "讨厌误会和第三者",
+        "此时应当有车"
+      ],
+      "triggers": {
+        "no_interaction": "男主呢？怎么掉线两章了？",
+        "sweet_moment": "啊啊啊啊kswl！按头小分队集合！",
+        "misunderstanding": "长嘴干嘛用的？解释啊！"
+      }
+    },
+    "data_miner": {
+      "name": "设定党 (Lore Master)",
+      "focus": "World Building & Systems",
+      "traits": [
+        "喜欢分析力量体系",
+        "关注伏笔回收",
+        "喜欢新奇设定",
+        "讨厌套路"
+      ],
+      "triggers": {
+        "cliche": "又是退婚流？能不能有点新意？",
+        "interesting_setting": "这个金手指有点意思，这就去研究一下。",
+        "info_dump": "设定抛太多了，看着累。"
+      }
+    }
+  },
+  "genre_mapping": {
+    "male_mainstream": ["skimmer", "shuang_addict", "data_miner"],
+    "suspense_thriller": ["logic_police", "data_miner"],
+    "female_channel": ["cp_fan", "skimmer", "logic_police"],
+    "urban_modern": ["shuang_addict", "skimmer"],
+    "scifi_future": ["logic_police", "data_miner"]
+  }
+}
