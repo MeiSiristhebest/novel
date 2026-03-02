@@ -1,0 +1,41 @@
+# Ignore everything by default
+*
+
+# Allow repo metadata
+!.gitignore
+
+# Allow prompt-only skill pack
+!.skills/
+!.skills/chinese-novelist/
+!.skills/chinese-novelist/SKILL.md
+!.skills/chinese-novelist/CHANGELOG.md
+!.skills/chinese-novelist/DEPRECATIONS.md
+!.skills/chinese-novelist/GETTING-STARTED.md
+!.skills/chinese-novelist/INTEGRATION-ARCHITECTURE.md
+
+!.skills/chinese-novelist/prompts/
+!.skills/chinese-novelist/prompts/**
+
+!.skills/chinese-novelist/references/
+!.skills/chinese-novelist/references/**
+
+!.skills/chinese-novelist/workflows/
+!.skills/chinese-novelist/workflows/**
+
+!.skills/chinese-novelist/schemas/
+!.skills/chinese-novelist/schemas/**
+
+!.skills/chinese-novelist/data/
+!.skills/chinese-novelist/data/**
+
+# Keep these excluded even if someone runs `git add -A`
+.skills/chinese-novelist/tools/
+.skills/chinese-novelist/scripts/
+.skills/chinese-novelist/automation/
+.skills/chinese-novelist/benchmarks/
+.skills/chinese-novelist/.claude/
+
+# Typical cruft
+**/__pycache__/
+**/*.pyc
+**/*.bak-*
