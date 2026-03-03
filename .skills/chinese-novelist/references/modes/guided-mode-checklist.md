@@ -33,6 +33,7 @@
 > - `references/guides/hook-techniques.md`
 > - `references/guides/interview-guide.md`
 > - `references/guides/webnovel-creator-workflow-cn.md`
+> - `references/guides/platform-playbook-cn.md`
 
 ---
 
@@ -66,6 +67,11 @@
 ## 📚 预读门禁（必须，防止“写之前没想清楚”）
 
 - **必须 (MUST)** 先阅读：`references/guides/webnovel-creator-workflow-cn.md`。
+- 若用户已经明确目标平台（起点/番茄/晋江/飞卢）或明确询问平台趋势/榜单：
+  - **必须 (MUST)** 额外阅读：`references/guides/platform-playbook-cn.md`。
+  - 然后输出一张《平台策略卡》（不超过 12 行）：商业模型、开篇强度、章节节奏、章末钩子、更新红线、情绪回报、标题题眼、禁忌。
+  - 若无法完成《平台策略卡》：**立即停止**，不要进入访谈与文件生成。
+
 - 然后在本次会话里先输出一张“速记卡”（不超过 12 行），内容必须包含：
   - 开篇 0-300 / 300-1000 的信息投放要点（各 2-3 条）
   - 日更章节的“每 300-500 字必须发生变化”的三种变化类型（至少 3 条）
