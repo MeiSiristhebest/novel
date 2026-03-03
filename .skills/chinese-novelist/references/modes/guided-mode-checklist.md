@@ -32,6 +32,7 @@
 > - `references/guides/chapter-micro-structure.md`
 > - `references/guides/hook-techniques.md`
 > - `references/guides/interview-guide.md`
+> - `references/guides/webnovel-creator-workflow-cn.md`
 
 ---
 
