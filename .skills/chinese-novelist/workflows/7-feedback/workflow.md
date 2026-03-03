@@ -74,7 +74,7 @@ The following conditions must be met (so the next volume is directionally correc
 - `07-项目状态.md`: lessons learned + next volume direction
 - `.context/VOLUME_XX.md`: retrospective + adjustments for next volume
 - `00-策划书.md`: update positioning if the market signal contradicts assumptions
-- `06-素材碎片.md` (optional): quote snippets, reader language, hook ideas
+- `08-素材碎片.md` (optional): quote snippets, reader language, hook ideas
 
 ## Gates & Validation
 
