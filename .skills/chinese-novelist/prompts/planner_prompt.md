@@ -14,7 +14,7 @@
 3. `novels/{{NOVEL_NAME}}/03-分章细纲.md`
 4. `novels/{{NOVEL_NAME}}/04-伏笔追踪表.md`
 5. `novels/{{NOVEL_NAME}}/05-时间线.md`
-6. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（不存在则回退 `08-素材碎片.md`）
+6. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（必须存在；缺失则阻断）
 7. `novels/{{NOVEL_NAME}}/.context/STORY_SO_FAR.md`（如存在）
 
 ## 输出
