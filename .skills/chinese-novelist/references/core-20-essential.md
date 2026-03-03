@@ -73,6 +73,7 @@
 
 > 引导模式/开篇工作坊时，**应当 (SHOULD)** 额外加载：`references/guides/webnovel-creator-workflow-cn.md`（网文创作工作流与开篇投放策略）。
 > 平台已明确（起点/番茄/晋江/飞卢）时，**应当 (SHOULD)** 额外加载：`references/guides/platform-playbook-cn.md`（平台榜单口径与写作策略对齐）。
+> 若用户要求 **最新榜单/趋势/合规口径**：必须先按该文件第 0 节完成《实时榜单快照》与《平台政策快照》，否则不得输出“最新结论”。
 
 ---
 

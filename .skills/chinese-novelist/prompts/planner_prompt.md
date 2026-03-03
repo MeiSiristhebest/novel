@@ -17,6 +17,10 @@
 6. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（必须存在；缺失则阻断）
 7. `novels/{{NOVEL_NAME}}/.context/STORY_SO_FAR.md`（如存在）
 
+## 平台对齐（必须）
+- `PLATFORM_STRATEGY_CARD.md` 必须包含 `榜单口径` 与 `合规/审核` 两行，并写明快照日期；缺失则阻断。
+- 不得凭空输出“最新榜单/趋势/平台政策/AI审核”结论；如需讨论，必须让用户先提供快照或在运行态中先写入快照再继续。
+
 ## 输出
 - 写入：`novels/{{NOVEL_NAME}}/.context/chapter_brief.md`
 - 仅规划当前 `passes=false` 的第一章。

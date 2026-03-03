@@ -1,6 +1,7 @@
 # 商业成功指南 (Commercial Success Guide)
 
 > **核心理念**：写得好 ≠ 赚得到钱。商业成功需要产品思维。
+> 重要：签约标准、分成、榜单口径、平台规则都可能随时间调整。若你要引用“最新榜单/当前趋势/平台审核与AI政策”，必须先按 `references/guides/platform-playbook-cn.md` 第 0 节制作快照（`.context/PLATFORM_SNAPSHOT.md` / `.context/PLATFORM_POLICY_SNAPSHOT.md`），否则不得输出“最新结论”。
 
 ---
 

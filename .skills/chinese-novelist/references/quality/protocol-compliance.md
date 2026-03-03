@@ -22,6 +22,10 @@
 
 ### 0.2 项目全局建模
 - [ ] 读取 `00-策划书.md` → 确认书名、核心卖点、目标平台
+- [ ] 若已明确目标平台（起点/番茄/晋江/飞卢），必须完成“平台对齐证据链”：
+  - [ ] `.context/PLATFORM_STRATEGY_CARD.md` 已存在，且与目标平台一致（包含 `榜单口径` 与 `合规/审核`，并写明快照日期）
+  - [ ] `.context/PLATFORM_SNAPSHOT.md` 已存在且非空（用于“最新榜单/当前风向/总榜Top”的证据）
+  - [ ] `.context/PLATFORM_POLICY_SNAPSHOT.md` 已存在且非空（用于“平台是否反AI/如何审核/合规口径”的证据）
 - [ ] 读取 `01-世界观圣经.md` → 确认世界观规则（力量体系、禁忌）
 - [ ] 读取 `02-人物深度档案.md` → 加载所有角色数据
 - [ ] 读取 `07-项目状态.md`（或STATE.md） → 确认当前阶段/卷/章
@@ -41,6 +45,11 @@
 ---
 
 ## Phase 1：上下文加载 (Context Loading)
+
+### 1.0 平台对齐（若已明确平台，必须）
+- [ ] 读取 `.context/PLATFORM_STRATEGY_CARD.md`（平台硬约束）
+- [ ] 读取 `.context/PLATFORM_SNAPSHOT.md`（榜单快照证据，缺失则阻断）
+- [ ] 读取 `.context/PLATFORM_POLICY_SNAPSHOT.md`（政策快照证据，缺失则阻断）
 
 **触发条件**：用户说"写第X章" / "继续写" / "正文"
 **🚨 CRITICAL — 必须 (MUST) 执行，禁止 (MUST NOT) 跳过任何步骤**

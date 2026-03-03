@@ -18,6 +18,10 @@
 
 
 ## 平台适配审计（必须写入 evidence）
+平台对齐证据链（硬约束）：
+- 若策略卡缺少 `榜单口径` 或 `合规/审核`：按 `MISSING_CONTEXT` 直接 FAIL。
+
+
 若存在 `PLATFORM_STRATEGY_CARD.md`：
 - 至少追加 1 条 evidence（soft 或 hard）评估“是否遵守开篇强度/章末钩子/禁忌”。
 - 判定建议：

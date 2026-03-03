@@ -8,9 +8,9 @@
 2. `.context/STATE.md`
 3. `.context/RUNNER_STATE.json`
 4. 当前章节相关素材（`03-分章细纲.md`、`04-伏笔追踪表.md`、`05-时间线.md`、`06-细节追踪表.md`）
-5. （可选/推荐）`.context/PLATFORM_STRATEGY_CARD.md`（若目标平台已明确则必须提供）
-
-
+5. （可选/推荐）`.context/PLATFORM_SNAPSHOT.md`（仅当本轮要生成/更新《平台策略卡》或讨论“最新榜单/当前风向/总榜Top”时必须提供）
+6. （可选/推荐）`.context/PLATFORM_POLICY_SNAPSHOT.md`（仅当本轮要生成/更新《平台策略卡》或讨论“平台是否反AI/如何审核/合规口径”时必须提供）
+7. （可选/推荐）`.context/PLATFORM_STRATEGY_CARD.md`（若目标平台已明确则必须提供）
 
 ## 平台对齐（Prompt-Only 的硬门槛）
 - 若你已明确目标平台（起点/番茄/晋江/飞卢），每轮都必须提供 `.context/PLATFORM_STRATEGY_CARD.md`。
@@ -43,11 +43,12 @@
 按顺序调用 `GATES_PROMPTS/`：
 1. gate_scene_schema
 2. gate_context_pack
-3. gate_chapter_wordcount
-4. gate_chapter_title
-5. gate_l1
-6. gate_consistency
-7. gate_state_sync
+3. gate_platform_snapshots
+4. gate_chapter_wordcount
+5. gate_chapter_title
+6. gate_l1
+7. gate_consistency
+8. gate_state_sync
 
 规则：任一 `blocking=true && passed=false` 立即停机。
 

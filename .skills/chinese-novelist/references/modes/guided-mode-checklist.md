@@ -69,6 +69,7 @@
 - **必须 (MUST)** 先阅读：`references/guides/webnovel-creator-workflow-cn.md`。
 - 若用户已经明确目标平台（起点/番茄/晋江/飞卢）或明确询问平台趋势/榜单：
   - **必须 (MUST)** 额外阅读：`references/guides/platform-playbook-cn.md`。
+  - 若本次问题涉及 **最新榜单/当前风向/总榜Top/平台是否反AI/如何审核**：必须先按该文件 **第 0 节** 获取《实时榜单快照》与《平台政策快照》（建议写入 `.context/PLATFORM_SNAPSHOT.md` 与 `.context/PLATFORM_POLICY_SNAPSHOT.md`）；缺失则 **立即停止** 并向用户索取快照。
   - 然后输出一张《平台策略卡》（不超过 12 行）：商业模型、开篇强度、章节节奏、章末钩子、更新红线、情绪回报、标题题眼、禁忌。
   - 若无法完成《平台策略卡》：**立即停止**，不要进入访谈与文件生成。
 
