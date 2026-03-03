@@ -71,6 +71,8 @@
 |:--|:-----|:-----|
 | 20 | `references/guides/chapter-micro-structure.md` | 章节骨架模板 |
 
+> 引导模式/开篇工作坊时，**应当 (SHOULD)** 额外加载：`references/guides/webnovel-creator-workflow-cn.md`（网文创作工作流与开篇投放策略）。
+
 ---
 
 ## 加载模式对照
