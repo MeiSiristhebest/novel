@@ -132,13 +132,29 @@
       }
     },
     "selection_reason": {
-      "type": "string"
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      }
     },
     "selection_score": {
-      "type": [
-        "number",
-        "integer"
-      ]
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "number",
+          "integer"
+        ]
+      }
     },
     "routing_max_chars": {
       "type": "integer",
