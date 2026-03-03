@@ -13,7 +13,7 @@
 2.1 `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（如存在）
 3. `novels/{{NOVEL_NAME}}/04-伏笔追踪表.md`
 4. `novels/{{NOVEL_NAME}}/05-时间线.md`
-5. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（不存在则回退 `06-素材碎片.md`）
+5. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（不存在则回退 `08-素材碎片.md`，若也不存在再回退 `06-素材碎片.md`）
 6. `references/quality/ai-guardrails.md`
 
 
