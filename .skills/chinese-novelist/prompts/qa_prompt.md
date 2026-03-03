@@ -10,10 +10,19 @@
 ## 读取
 1. `novels/{{NOVEL_NAME}}/drafts/chapter_{{CHAPTER_NUM_PADDED}}.md`
 2. `novels/{{NOVEL_NAME}}/.context/scene_list.json`
+2.1 `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（如存在）
 3. `novels/{{NOVEL_NAME}}/04-伏笔追踪表.md`
 4. `novels/{{NOVEL_NAME}}/05-时间线.md`
 5. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（不存在则回退 `06-素材碎片.md`）
 6. `references/quality/ai-guardrails.md`
+
+
+## 平台适配审计（必须写入 evidence）
+若存在 `PLATFORM_STRATEGY_CARD.md`：
+- 至少追加 1 条 evidence（soft 或 hard）评估“是否遵守开篇强度/章末钩子/禁忌”。
+- 判定建议：
+  - 若章节前 1200 字内没有任何明确冲突或代价，且章末也无钩子：记 1 个 hard issue（PLATFORM_MISMATCH）。
+  - 否则：不匹配项默认为 soft issue，写清楚对应策略卡哪一条被违背。
 
 ## 判定
 - 若存在一致性硬伤或章节字数 < 2000：`result=FAIL`

@@ -6,6 +6,7 @@
 - chapter_id/chapter_title/chapter_mode
 - scene_types
 - genre
+- platform（起点/番茄/晋江/飞卢，若未知写 null）
 - pipeline
 - next_role
 - current_stage
@@ -18,6 +19,7 @@
    - 与 `scene_types` 对应的场景文件
    - 与 `genre` 对应的流派文件（style exemplar + hooks）
    - 与 `current_stage` 对应的 `workflows/[阶段目录]/workflow.md`
+   - 若 `platform` 非空：必须包含 `.context/PLATFORM_STRATEGY_CARD.md`（若未提供则视为 missing 并阻断）。
 2. 相关文件（selected）按混合检索排序：
    - 规则命中加权
    - 关键词/BM25命中加权

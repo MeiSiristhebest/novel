@@ -10,6 +10,7 @@
 ## 读取
 1. `novels/{{NOVEL_NAME}}/.context/scene_list.json`
 2. `novels/{{NOVEL_NAME}}/.context/STATE.md`
+2.1 `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（如存在；若 STATE 声明平台但该文件缺失，则阻断）
 3. `novels/{{NOVEL_NAME}}/03-分章细纲.md`
 4. `novels/{{NOVEL_NAME}}/04-伏笔追踪表.md`
 5. `novels/{{NOVEL_NAME}}/05-时间线.md`
@@ -21,6 +22,7 @@
 - 仅规划当前 `passes=false` 的第一章。
 
 ## chapter_brief 必含
+0. 平台对齐摘要（1-2句，基于 PLATFORM_STRATEGY_CARD）
 1. 本章模式：`{{CHAPTER_MODE}}`
 2. 前情摘要（2-4句）
 3. 本章核心任务（3条内）

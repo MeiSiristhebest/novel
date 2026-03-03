@@ -20,6 +20,7 @@
 4. `novels/{{NOVEL_NAME}}/.context/SESSION_LOG.md`（追加一条）
 5. `novels/{{NOVEL_NAME}}/.context/PROGRESS.md`（初始化记录）
 6. `novels/{{NOVEL_NAME}}/.context/initializer_result.json`
+7. `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（若策划书声明目标平台则必须生成；否则写 N/A）
 
 ## scene_list 约束（必须）
 - 每章一个条目。
@@ -29,6 +30,13 @@
 - JSON 必须合法，禁止未转义引号。
 - `chapter_file` 必须是 `drafts/chapter_XX.md`。
 - 建议每个 scene 增加 `schema_version: "1"`（为 strict-schema 兼容预留）。
+
+
+## PLATFORM_STRATEGY_CARD 规则（必须）
+- 目标：把平台偏好固化成 <=12 行的硬约束，供后续 Writer/QA 直接引用。
+- 若 `00-策划书.md` 中能识别目标平台（起点/番茄/晋江/飞卢）：
+  - 必须参考 `references/guides/platform-playbook-cn.md`，生成《平台策略卡》。
+- 若无法识别平台：生成占位卡，第一行写 `目标平台：N/A`，并在末尾写明“后续确认平台后需重建”。
 
 ## passes 计算规则
 - 若 `drafts/chapter_XX.md` 存在且中文字符数 >= 2000，且历史进度中该章标记“定稿/完成”，则 `passes=true`。

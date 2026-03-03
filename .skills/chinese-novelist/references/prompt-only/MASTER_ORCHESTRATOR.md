@@ -8,6 +8,13 @@
 2. `.context/STATE.md`
 3. `.context/RUNNER_STATE.json`
 4. 当前章节相关素材（`03-分章细纲.md`、`04-伏笔追踪表.md`、`05-时间线.md`、`06-细节追踪表.md`）
+5. （可选/推荐）`.context/PLATFORM_STRATEGY_CARD.md`（若目标平台已明确则必须提供）
+
+
+
+## 平台对齐（Prompt-Only 的硬门槛）
+- 若你已明确目标平台（起点/番茄/晋江/飞卢），每轮都必须提供 `.context/PLATFORM_STRATEGY_CARD.md`。
+- 若缺失：本轮直接停机，先根据 `references/guides/platform-playbook-cn.md` 生成策略卡（模板见 `references/prompt-only/MANUAL_TEMPLATES/PLATFORM_STRATEGY_CARD.template.md`）。
 
 ## Phase 0：运行态确认
 1. 识别 `next_role`、`current_chapter`、`pipeline`。

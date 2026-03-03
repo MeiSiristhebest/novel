@@ -71,6 +71,7 @@
   "chapter_id": "CH03",
   "scene_types": ["副本探险"],
   "genre": "system-litrpg",
+  "platform": null,
   "required_files": [],
   "selected_files": [],
   "deferred_files": [],

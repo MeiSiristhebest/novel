@@ -15,3 +15,7 @@
 - state: 已提供
 - runner_state: 已提供
 - chapter materials: 已提供
+
+## 平台策略卡（若目标平台已明确则必须）
+- platform: {{platform_or_null}}
+- PLATFORM_STRATEGY_CARD: 已提供 / N/A
