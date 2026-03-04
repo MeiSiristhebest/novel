@@ -56,7 +56,7 @@ After completion: `4-drafts`
 
 ## Required Reads
 
-- `00-全局设定/00-策划书.md`, `00-全局设定/01-世界观圣经.md`, `00-全局设定/02-人设档案.md`（旧版可能为 `02-人物深度档案.md`）
+- `00-全局设定/00-策划书.md`, `00-全局设定/01-世界观圣经.md`, `00-全局设定/02-人设档案.md`
 - `references/templates/beat-sheet-template.md`
 - `references/guides/chapter-micro-structure.md`
 
@@ -93,6 +93,7 @@ pwsh -File .skills/chinese-novelist/tools/run-novel-automation.ps1 -Novel "<Nove
 # From repo root
 bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer-qa 1 true true 1 claude sonnet "" OPENAI_API_KEY "" false true
 ```
+
 
 
 

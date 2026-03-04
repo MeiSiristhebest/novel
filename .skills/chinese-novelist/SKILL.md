@@ -275,7 +275,7 @@ Phase 5 → 更新状态文件 (每次 MUST)
 
 #### 长程写作 Harness
 
-**单一真相源**：`novels/[书名]/.context/`（尤其是 `scene_list.json` + `STATE.md` + `RUNNER_STATE.json`）。项目根视图文档默认布局为：`03-分章细纲.md` 在根目录，其余 `00/01/02/04/05/06/07` 放在 `00-全局设定/`（旧版兼容根目录平铺）；其中 `03/04/05/06/07` 由 `tools/sync_project_views.py` 同步维护。
+**单一真相源**：`novels/[书名]/.context/`（尤其是 `scene_list.json` + `STATE.md` + `RUNNER_STATE.json`）。项目根视图文档默认布局为：`03-分章细纲.md` 在根目录，其余 `00/01/02/04/05/06/07` 放在 `00-全局设定/`；其中 `03/04/05/06/07` 由 `tools/sync_project_views.py` 同步维护。
 
 **触发词**：`自动写X章` → 运行 `tools/novel_agent_runner.py --novel [书名] --chapters X`
 
@@ -435,3 +435,4 @@ Phase 5 → 更新状态文件 (每次 MUST)
 | 阶段推进/状态管理 | `templates/project-state-template.json` |
 
 > 所有 Hook 文件路径前缀：`references/`
+

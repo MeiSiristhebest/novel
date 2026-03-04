@@ -74,7 +74,7 @@ The following conditions must be met (so the next volume is directionally correc
 - `00-全局设定/07-项目状态.md`: lessons learned + next volume direction
 - `.context/VOLUME_XX.md`: retrospective + adjustments for next volume
 - `00-全局设定/00-策划书.md`: update positioning if the market signal contradicts assumptions
-- `08-素材碎片.md` (optional): quote snippets, reader language, hook ideas
+- `00-全局设定/08-素材碎片.md` (optional): quote snippets, reader language, hook ideas
 
 ## Gates & Validation
 
@@ -102,6 +102,8 @@ pwsh -File .skills/chinese-novelist/tools/run-novel-automation.ps1 -Novel "<Nove
 # From repo root
 bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer-qa 1 true true 1 claude sonnet "" OPENAI_API_KEY "" false true
 ```
+
+
 
 
 

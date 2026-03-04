@@ -33,7 +33,8 @@
 
 ```bash
 # 格式
-python tools/quick_start.py --template [流派ID] --engine [引擎ID] --novel [书名]
+python tools/quick_start.py --genre [流派ID] --engine [引擎ID] --novel [书名]
 ```
 
 > **注意**：如果用户不知道书名，请根据流派自动生成 3 个爆款书名供选择。
+
