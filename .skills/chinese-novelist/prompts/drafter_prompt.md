@@ -9,8 +9,9 @@
 
 ## 读取
 1. `novels/{{NOVEL_NAME}}/.context/chapter_brief.md`
-2. `references/style-exemplars/{{GENRE}}.md`
-3. `references/quality/ai-guardrails.md`
+2. `novels/{{NOVEL_NAME}}/.context/aesthetic-charter.md`（**文风指导**）
+3. `references/style-exemplars/{{GENRE}}.md`
+4. `references/quality/ai-guardrails.md`
 
 ## 写作要求
 - 输出文件：`novels/{{NOVEL_NAME}}/drafts/chapter_{{CHAPTER_NUM_PADDED}}.md`

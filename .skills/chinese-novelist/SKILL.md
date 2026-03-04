@@ -188,14 +188,14 @@ Phase 5 → 更新状态文件 (每次 MUST)
 
 **渐进式输出格式**：
 ```markdown
-✅ **[1/8] 00-策划书.md** 已生成。
+✅ **[1/8] 00-全局设定/00-策划书.md** 已生成。
 
 📄 **文件预览**：
 - 一句话梗概：[梗概]
 - 目标读者：[读者]
 - 对标作品：[对标]
 
-👉 是否继续生成 **01-世界观圣经.md**？
+👉 是否继续生成 **00-全局设定/01-世界观圣经.md**？
    - 输入 `Y` 或 `继续` → 生成下一个文件
    - 输入 `跳过` → 跳过此文件
    - 输入 `全部生成` → 批量完成剩余文件
@@ -275,7 +275,7 @@ Phase 5 → 更新状态文件 (每次 MUST)
 
 #### 长程写作 Harness
 
-**单一真相源**：`novels/[书名]/.context/`（尤其是 `scene_list.json` + `STATE.md` + `RUNNER_STATE.json`）。根目录 `00-07` 为衍生视图，统一由 `tools/sync_project_views.py` 同步。
+**单一真相源**：`novels/[书名]/.context/`（尤其是 `scene_list.json` + `STATE.md` + `RUNNER_STATE.json`）。项目根视图文档默认布局为：`03-分章细纲.md` 在根目录，其余 `00/01/02/04/05/06/07` 放在 `00-全局设定/`（旧版兼容根目录平铺）；其中 `03/04/05/06/07` 由 `tools/sync_project_views.py` 同步维护。
 
 **触发词**：`自动写X章` → 运行 `tools/novel_agent_runner.py --novel [书名] --chapters X`
 

@@ -50,9 +50,9 @@ The following conditions must be met (so the next volume is directionally correc
 - what caused drop-off (fix)
 - what the reader is actually paying for (double down)
 2. Adjustments are written into project artifacts (not only in chat):
-- `07-项目状态.md`: lessons learned + next direction + risk list
+- `00-全局设定/07-项目状态.md`: lessons learned + next direction + risk list
 - `.context/VOLUME_XX.md`: retrospective + what changes in the next volume
-- `00-策划书.md`: update positioning if your assumptions were wrong
+- `00-全局设定/00-策划书.md`: update positioning if your assumptions were wrong
 3. The next outline reflects the adjustments:
 - before returning to serialization, the next volume plan (or the next chapters) is updated in `03-分章细纲.md` / the next `.context/VOLUME_XX.md`.
 
@@ -71,9 +71,9 @@ The following conditions must be met (so the next volume is directionally correc
 
 ## Outputs (Write/Update)
 
-- `07-项目状态.md`: lessons learned + next volume direction
+- `00-全局设定/07-项目状态.md`: lessons learned + next volume direction
 - `.context/VOLUME_XX.md`: retrospective + adjustments for next volume
-- `00-策划书.md`: update positioning if the market signal contradicts assumptions
+- `00-全局设定/00-策划书.md`: update positioning if the market signal contradicts assumptions
 - `08-素材碎片.md` (optional): quote snippets, reader language, hook ideas
 
 ## Gates & Validation
@@ -102,5 +102,6 @@ pwsh -File .skills/chinese-novelist/tools/run-novel-automation.ps1 -Novel "<Nove
 # From repo root
 bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer-qa 1 true true 1 claude sonnet "" OPENAI_API_KEY "" false true
 ```
+
 
 

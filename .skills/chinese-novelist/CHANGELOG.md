@@ -47,7 +47,7 @@
 ### 🚫 禁止跳章修复（Chapter Continuity Hard Gate）
 
 #### 修复
-- `novels/TheGlitchHunter/.context/scene_list.json` 补齐缺失章节：
+- `novels/[书名]/.context/scene_list.json` 补齐缺失章节：
   - 新增 `CH10` / `CH11` / `CH12`
   - 章节序列恢复为 `CH01..CH20` 连续编号
 - `tools/runtime_core.py` 增强 `validate_scene_list_data()`：

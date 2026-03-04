@@ -35,14 +35,14 @@
 
 To proceed to the next stage, the following must be true (human-checkable, and outline-ready):
 
-1. `00-策划书.md` includes:
+1. `00-全局设定/00-策划书.md` includes:
 - one-sentence logline
 - ~500-word story synopsis (range is fine, but it must be long enough to outline from)
-2. `02-人物深度档案.md` is usable for drafting (not just a sketch):
+2. `00-全局设定/02-人设档案.md`（旧版可能为 `02-人物深度档案.md`） is usable for drafting (not just a sketch):
 - protagonist: basic info, 3 core traits, fatal flaw, Want/Need, voice/catchphrases, behavioral tells
 - at least 2 key supporting characters: basic info + story function + relationship to protagonist
 - relationship network is explicit (who wants what from whom, and what conflicts exist)
-3. No major contradictions with existing `01-世界观圣经.md` / project facts (if they already exist).
+3. No major contradictions with existing `00-全局设定/01-世界观圣经.md` / project facts (if they already exist).
 
 ---
 
@@ -52,14 +52,14 @@ After completion: `3-outline`
 
 ## Required Reads
 
-- `00-策划书.md` (genre, selling points, logline slot)
+- `00-全局设定/00-策划书.md` (genre, selling points, logline slot)
 - `references/templates/character-depth-template.md`
 - `references/guides/character-psychology-deep.md`
 
 ## Outputs (Write/Update)
 
-- `00-策划书.md`: one-sentence logline + 500-word synopsis
-- `02-人物深度档案.md`: protagonist + 2-3 key supports + relationship network
+- `00-全局设定/00-策划书.md`: one-sentence logline + 500-word synopsis
+- `00-全局设定/02-人设档案.md`（旧版可能为 `02-人物深度档案.md`）: protagonist + 2-3 key supports + relationship network
 
 ## Gates & Validation
 
@@ -67,8 +67,8 @@ After completion: `3-outline`
 
 ## DoD (Definition of Done)
 
-- Logline exists in `00-策划书.md`
-- Protagonist profile completeness >= 80% in `02-人物深度档案.md`
+- Logline exists in `00-全局设定/00-策划书.md`
+- Protagonist profile completeness >= 80% in `00-全局设定/02-人设档案.md`（旧版可能为 `02-人物深度档案.md`）
 - At least 2 supporting characters have basic settings + relationships
 
 ## Commands (Optional)
@@ -88,5 +88,6 @@ pwsh -File .skills/chinese-novelist/tools/run-novel-automation.ps1 -Novel "<Nove
 # From repo root
 bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer-qa 1 true true 1 claude sonnet "" OPENAI_API_KEY "" false true
 ```
+
 
 

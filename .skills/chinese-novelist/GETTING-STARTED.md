@@ -122,22 +122,22 @@ python tools/novel_agent_runner.py --novel "你的书名" --llm-backend codex-cl
 ### 方式 3.1: 迁移旧项目到新状态模型
 ```bash
 # 预演（不落盘）
-python tools/migrate_novel_state.py --novel "TheGlitchHunter"
+python tools/migrate_novel_state.py --novel "你的书名"
 
 # 正式迁移（自动备份）
-python tools/migrate_novel_state.py --novel "TheGlitchHunter" --apply
+python tools/migrate_novel_state.py --novel "你的书名" --apply
 
 # 运行时校验
-python tools/validate_runtime.py --novel "TheGlitchHunter"
+python tools/validate_runtime.py --novel "你的书名"
 ```
 
 ### 方式 3.2: Demo 式自动循环入口
 ```bash
 # Windows
-powershell -File tools/run-novel-automation.ps1 -Novel "TheGlitchHunter" -Pipeline "five-role" -LlmBackend "openai" -Model "gpt-5-mini" -Rounds 3 -DelaySeconds 1
+powershell -File tools/run-novel-automation.ps1 -Novel "你的书名" -Pipeline "five-role" -LlmBackend "openai" -Model "gpt-5-mini" -Rounds 3 -DelaySeconds 1
 
 # Bash
-bash tools/run-novel-automation.sh "TheGlitchHunter" "writer-qa" 3 true true 1 "ollama" "qwen2.5:14b"
+bash tools/run-novel-automation.sh "你的书名" "writer-qa" 3 true true 1 "ollama" "qwen2.5:14b"
 ```
 
 说明：

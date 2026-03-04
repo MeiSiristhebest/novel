@@ -7,15 +7,22 @@
 2. 本提示词规划契约
 3. 风格偏好
 
-## 读取
-1. `novels/{{NOVEL_NAME}}/.context/scene_list.json`
-2. `novels/{{NOVEL_NAME}}/.context/STATE.md`
-2.1 `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（如存在；若 STATE 声明平台但该文件缺失，则阻断）
-3. `novels/{{NOVEL_NAME}}/03-分章细纲.md`
-4. `novels/{{NOVEL_NAME}}/04-伏笔追踪表.md`
-5. `novels/{{NOVEL_NAME}}/05-时间线.md`
-6. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（必须存在；缺失则阻断）
-7. `novels/{{NOVEL_NAME}}/.context/STORY_SO_FAR.md`（如存在）
+## 读取（上下文滑动窗口）
+1. **战略层**：
+   - `novels/{{NOVEL_NAME}}/00-全局设定/09-弧线规划与冲突设计.md`（大后期方向）
+   - `novels/{{NOVEL_NAME}}/.context/aesthetic-charter.md`（**基调红线：故障美学/黑色幽默**）
+2. **进度层**：
+   - `novels/{{NOVEL_NAME}}/.context/STORY_SO_FAR.md`（全局进度对齐）
+   - `novels/{{NOVEL_NAME}}/.context/STATE.md`
+   - `{{CURRENT_VOLUME_FILE}}`（本卷目标锚点）
+3. **战术层**：
+   - `{{CURRENT_ARC_FILE}}`（具体的 Arc 核心冲突与节点）
+   - `novels/{{NOVEL_NAME}}/.context/scene_list.json`
+   - `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（平台对齐）
+4. **追踪层**：
+   - `novels/{{NOVEL_NAME}}/00-全局设定/04-伏笔追踪表.md`
+   - `novels/{{NOVEL_NAME}}/00-全局设定/05-时间线.md`
+   - `novels/{{NOVEL_NAME}}/00-全局设定/06-细节追踪表.md`
 
 ## 平台对齐（必须）
 - `PLATFORM_STRATEGY_CARD.md` 必须包含 `榜单口径` 与 `合规/审核` 两行，并写明快照日期；缺失则阻断。

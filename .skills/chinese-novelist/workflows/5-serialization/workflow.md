@@ -64,7 +64,7 @@ This stage is iterative. For a single round / chapter to count as "complete" (an
 - the selected scene is written, and QA/Polisher PASS
 - in non-dry-run runs, `passes=true` is written back into `.context/scene_list.json`
 3. Phase 5 sync is done:
-- `07-项目状态.md` + `.context/VOLUME_XX.md` + `03/04/05/06` are updated for this chapter
+- `00-全局设定/07-项目状态.md` + `.context/VOLUME_XX.md` + `03/04/05/06` are updated for this chapter
 - `.context/RUNNER_STATE.json` reflects the new progress
 
 ---
@@ -78,7 +78,7 @@ When a volume is complete, proceed to: `6-revision`
 - `.context/STATE.md`
 - `.context/VOLUME_XX.md` (current volume)
 - `.context/scene_list.json` (select one scene where `passes=false`)
-- `03-分章细纲.md`, `04-伏笔追踪表.md`, `05-时间线.md`, `06-细节追踪表.md`
+- `03-分章细纲.md`, `00-全局设定/04-伏笔追踪表.md`, `00-全局设定/05-时间线.md`, `00-全局设定/06-细节追踪表.md`
 
 ## Outputs (Write/Update)
 
@@ -87,12 +87,12 @@ When a volume is complete, proceed to: `6-revision`
 - `.context/RUNNER_STATE.json` (progress + last_error)
 - When QA/Polisher PASS and not dry-run: write `.context/scene_list.json` item `passes=true`
 - Phase 5 sync must update the 6 state views:
-  - `07-项目状态.md`
+  - `00-全局设定/07-项目状态.md`
   - `.context/VOLUME_XX.md`
   - `03-分章细纲.md`
-  - `04-伏笔追踪表.md`
-  - `05-时间线.md`
-  - `06-细节追踪表.md`
+  - `00-全局设定/04-伏笔追踪表.md`
+  - `00-全局设定/05-时间线.md`
+  - `00-全局设定/06-细节追踪表.md`
 
 ## Gates & Validation (Strict)
 
@@ -125,4 +125,5 @@ pwsh -File .skills/chinese-novelist/tools/run-novel-automation.ps1 -Novel "<Nove
 # From repo root
 bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer-qa 1 true true 1 claude sonnet "" OPENAI_API_KEY "" false true
 ```
+
 

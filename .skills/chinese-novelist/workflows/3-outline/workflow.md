@@ -46,7 +46,7 @@ To proceed to the next stage, the following must be true (human-checkable, and r
 2. `.context/VOLUME_01.md` (or the current volume file) exists and has:
 - volume targets + key events
 - a chapter status placeholder list (so later updates can flip planned -> drafted -> QA pass)
-3. `04-伏笔追踪表.md`, `05-时间线.md`, `06-细节追踪表.md` exist at least as skeletons (so Phase 1/5 have something to read/write).
+3. `00-全局设定/04-伏笔追踪表.md`, `00-全局设定/05-时间线.md`, `00-全局设定/06-细节追踪表.md` exist at least as skeletons (so Phase 1/5 have something to read/write).
 
 ---
 
@@ -56,7 +56,7 @@ After completion: `4-drafts`
 
 ## Required Reads
 
-- `00-策划书.md`, `01-世界观圣经.md`, `02-人物深度档案.md`
+- `00-全局设定/00-策划书.md`, `00-全局设定/01-世界观圣经.md`, `00-全局设定/02-人设档案.md`（旧版可能为 `02-人物深度档案.md`）
 - `references/templates/beat-sheet-template.md`
 - `references/guides/chapter-micro-structure.md`
 
@@ -64,7 +64,7 @@ After completion: `4-drafts`
 
 - `03-分章细纲.md`: Volume 1 fine outline (30+ plot points) + chapter core events
 - `.context/VOLUME_01.md` (or current volume): volume arc, targets, chapter status placeholders
-- `04-伏笔追踪表.md`, `05-时间线.md`, `06-细节追踪表.md`: create skeletons if missing
+- `00-全局设定/04-伏笔追踪表.md`, `00-全局设定/05-时间线.md`, `00-全局设定/06-细节追踪表.md`: create skeletons if missing
 
 ## Gates & Validation
 
@@ -93,5 +93,6 @@ pwsh -File .skills/chinese-novelist/tools/run-novel-automation.ps1 -Novel "<Nove
 # From repo root
 bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer-qa 1 true true 1 claude sonnet "" OPENAI_API_KEY "" false true
 ```
+
 
 

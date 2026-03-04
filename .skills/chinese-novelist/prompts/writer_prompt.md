@@ -7,15 +7,26 @@
 2. 本提示词写作约束
 3. 风格偏好
 
-## 读取
-1. `novels/{{NOVEL_NAME}}/.context/scene_list.json`（定位第一条 `passes=false`）
-2. `novels/{{NOVEL_NAME}}/.context/STATE.md`
-2.1 `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（如存在；若 STATE/策划书已明确平台但缺失，则阻断）
-3. `novels/{{NOVEL_NAME}}/03-分章细纲.md`
-4. `novels/{{NOVEL_NAME}}/04-伏笔追踪表.md`
-5. `novels/{{NOVEL_NAME}}/05-时间线.md`
-6. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（必须存在；缺失则阻断）
-7. `references/quality/protocol-compliance.md`
+## 读取（上下文滑动窗口）
+1. **全局设定（常量层）**：
+   - `novels/{{NOVEL_NAME}}/00-全局设定/01-世界观圣经.md`（核心硬规则）
+   - `novels/{{NOVEL_NAME}}/00-全局设定/02-人设档案.md`（全书核心主角）
+   - `novels/{{NOVEL_NAME}}/.context/aesthetic-charter.md`（**基调红线：故障美学/黑色幽默**）
+2. **长线连贯（记忆层）**：
+   - `novels/{{NOVEL_NAME}}/.context/STORY_SO_FAR.md`（截止上一卷的重大节点摘要）
+   - `novels/{{NOVEL_NAME}}/.context/STATE.md`（当前创作进度状态）
+3. **当卷聚焦（滑动层）**：
+   - `{{CURRENT_VOLUME_FILE}}`（本卷进度的核心锚点）
+   - `novels/{{NOVEL_NAME}}/{{CURRENT_VOLUME_DIR}}/02-角色-卷{{VOLUME_NUM}}.md`（本卷活跃角色/关系网）
+4. **即时任务（执行层）**：
+   - `{{CURRENT_ARC_FILE}}`（当前具体的剧情微结构细纲）
+   - `novels/{{NOVEL_NAME}}/.context/scene_list.json`（定位待写章节）
+   - `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（平台节奏卡）
+5. **管控表单（状态层）**：
+   - `novels/{{NOVEL_NAME}}/00-全局设定/04-伏笔追踪表.md`
+   - `novels/{{NOVEL_NAME}}/00-全局设定/05-时间线.md`
+   - `novels/{{NOVEL_NAME}}/00-全局设定/06-细节追踪表.md`（必须对齐开局快照）
+   - `references/quality/protocol-compliance.md`（协议合规项）
 
 ## 输出
 - 写入 `novels/{{NOVEL_NAME}}/drafts/chapter_{{CHAPTER_NUM_PADDED}}.md`

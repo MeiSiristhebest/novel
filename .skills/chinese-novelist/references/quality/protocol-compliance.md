@@ -12,6 +12,18 @@
 
 ---
 
+## 路径约定（通用）
+
+为避免“同名文件放在不同位置”导致读取失败，本技能库支持两种工程布局：
+
+- **推荐布局（新版）**：将根视图文档放在 `00-全局设定/` 下（如 `00-全局设定/00-策划书.md`、`00-全局设定/04-伏笔追踪表.md`）。
+- **兼容布局（旧版）**：同名文件平铺在项目根目录（如 `00-策划书.md`、`04-伏笔追踪表.md`、`05-时间线.md`、`06-细节追踪表.md`、`07-项目状态.md`）。
+
+本协议后续默认按“新版布局”书写；若你的项目仍是旧版布局，请将同名文件视为等价回退。
+
+> 约定：`03-分章细纲.md` 默认位于项目根目录（由 `.context/scene_list.json` 同步衍生）。
+
+---
 ## Phase 0：会话初始化 (Session Init)
 
 **触发条件**：每次新会话开始时 / 用户说"开始写作"
@@ -21,14 +33,14 @@
 - [ ] 读取 `AGENTS.md` → 确认触发-响应矩阵
 
 ### 0.2 项目全局建模
-- [ ] 读取 `00-策划书.md` → 确认书名、核心卖点、目标平台
+- [ ] 读取 `00-全局设定/00-策划书.md`（旧版为 `00-策划书.md`） → 确认书名、核心卖点、目标平台
 - [ ] 若已明确目标平台（起点/番茄/晋江/飞卢），必须完成“平台对齐证据链”：
   - [ ] `.context/PLATFORM_STRATEGY_CARD.md` 已存在，且与目标平台一致（包含 `榜单口径` 与 `合规/审核`，并写明快照日期）
   - [ ] `.context/PLATFORM_SNAPSHOT.md` 已存在且非空（用于“最新榜单/当前风向/总榜Top”的证据）
   - [ ] `.context/PLATFORM_POLICY_SNAPSHOT.md` 已存在且非空（用于“平台是否反AI/如何审核/合规口径”的证据）
-- [ ] 读取 `01-世界观圣经.md` → 确认世界观规则（力量体系、禁忌）
-- [ ] 读取 `02-人物深度档案.md` → 加载所有角色数据
-- [ ] 读取 `07-项目状态.md`（或STATE.md） → 确认当前阶段/卷/章
+- [ ] 读取 `00-全局设定/01-世界观圣经.md`（旧版为 `01-世界观圣经.md`） → 确认世界观规则（力量体系、禁忌）
+- [ ] 读取 `00-全局设定/02-人设档案.md`（旧版可能为 `02-人物深度档案.md`） → 加载所有角色数据
+- [ ] 读取 `00-全局设定/07-项目状态.md`（旧版为 `07-项目状态.md`）（或STATE.md） → 确认当前阶段/卷/章
 
 ### 0.3 流派能力索引
 - [ ] 查询 `references/hooks/README.md` → 确认本项目流派对应的Hub Hook清单
@@ -50,258 +62,6 @@
 - [ ] 读取 `.context/PLATFORM_STRATEGY_CARD.md`（平台硬约束）
 - [ ] 读取 `.context/PLATFORM_SNAPSHOT.md`（榜单快照证据，缺失则阻断）
 - [ ] 读取 `.context/PLATFORM_POLICY_SNAPSHOT.md`（政策快照证据，缺失则阻断）
-
-**触发条件**：用户说"写第X章" / "继续写" / "正文"
-**🚨 CRITICAL — 必须 (MUST) 执行，禁止 (MUST NOT) 跳过任何步骤**
-
-> 参考 `references/guides/consistency-engine.md` 的 **写前加载清单**
-
-### 1.1 状态与进度
-- [ ] 读取 `07-项目状态.md`（或`.context/STATE.md`） → 确认当前章节
-- [ ] 读取 `.context/VOLUME_XX.md` → 确认本卷剧情弧线、目标
-
-### 1.2 大纲与细纲
-- [ ] 读取 `03-分章细纲.md` → 提取本章：
-  - 核心事件
-  - 场景类型
-  - 冲突目标
-  - 字数目标
-
-### 1.3 一致性检查
-- [ ] 读取 `04-伏笔追踪表.md` → 检查：
-  - 需要回收的伏笔
-  - 需要埋设的新伏笔
-- [ ] 读取 `05-时间线.md` → 确认当前故事时间点
-- [ ] 读取 `06-细节追踪表.md`（必须存在；缺失则阻断）→ 检查：
-  - 人物当前状态（位置、伤势、情绪）
-  - 物品持有状态
-  - 不可做的事（如：右手断了就不能用右手）
-
-### 1.4 前文衔接
-- [ ] 读取上一章最后 500 字 → 确保衔接自然
-- [ ] 生成**内部写前摘要**（不写入正文）：
-
-```markdown
-## 第[X]章 写前摘要
-
-### 上一章发生了什么
-- [一句话概括核心事件]
-- [结尾悬念/钩子]
-
-### 当前人物状态
-| 人物 | 位置 | 身体状态 | 情绪状态 | 持有物品 |
-|-----|------|---------|---------|---------|
-| 主角 | [?] | [?]     | [?]     | [?]     |
-
-### 本章必须处理
-- [ ] 回应上一章悬念：[?]
-- [ ] 推进伏笔：[?]
-- [ ] 核心目标：[?]
-
-### 禁止事项（基于细节追踪表）
-- ❌ [例如：主角右手已断]
-- ❌ [例如：小红已死亡]
-```
-
----
-
-## Phase 2：场景分析与资源路由 (Scene Routing)
-
-**🤖 AI指令**：根据Phase 1提取的场景类型，执行三层路由。
-
-### 2.1 场景类型路由
-
-根据本章大纲中的关键词，匹配场景类型，加载对应文件：
-
-| 场景类型 | 识别关键词 | 必读文件 | 可选文件 |
-|:--------|:----------|:---------|:---------|
-| 🗡️ **动作战斗** | 战斗/打斗/厮杀/对决/追杀 | `scenes/action-scene-guide.md` | `hooks/sensory-library.md` |
-| 💘 **情感戏** | 告白/分离/重逢/误会/心动 | `scenes/romance-scene-guide.md` + `guides/emotional-beats.md` | `hooks/sweet-moments.md` |
-| 👊 **打脸场景** | 羞辱/轻视/震惊/逆袭/碾压 | `hooks/face-slapping.md` | `hooks/audience-reaction.md` |
-| 🏠 **家族斗争** | 宗族/亲戚/长辈欺压/极品 | `hooks/family-conflict.md` | `hooks/power-struggle.md` |
-| 🌟 **突破晋级** | 突破/晋级/领悟/顿悟/升级 | `hooks/power-system.md` | `hooks/sensory-library.md` |
-| 🎯 **关键对话** | 谈判/揭秘/对峙/告知真相 | `hooks/dialogue-subtext.md` + `scenes/dialogue-writing.md` | `hooks/tension-building.md` |
-| 🛡️ **生死危机** | 绝境/濒死/追杀/陷阱 | `hooks/tension-building.md` + `hooks/suspense-building.md` | `hooks/sensory-library.md` |
-| 🎪 **日常生活** | 修炼/日常/休息/准备 | `guides/chapter-micro-structure.md` | `hooks/relaxed-tone.md` |
-| 🏟️ **比赛竞技** | 比赛/对抗/竞赛/排位 | `hooks/match-commentary.md` + `hooks/match-tension.md` | `hooks/tournament-arc.md` |
-| 👥 **群像/团战** | 团队/合作/配合/多人 | `guides/ensemble-cast-guide.md` + `hooks/team-dynamics.md` | `hooks/rivalry-dynamics.md` |
-| 🏰 **副本探险** | 副本/迷宫/古墓/秘境 | `hooks/dungeon-design.md` + `hooks/tension-building.md` | `hooks/map-design.md` |
-| 🎭 **商战权谋** | 朝堂/博弈/阴谋/商战 | `scenes/business-palace-guide.md` + `hooks/political-intrigue.md` | `hooks/bureaucracy-rules.md` |
-
-**多场景组合**：一章可匹配多个场景类型，全部加载对应文件。
-- 战斗+打脸 → 加载 `references/scenes/action-scene-guide.md` + `references/hooks/face-slapping.md`
-- 情感+危机 → 加载 `references/scenes/romance-scene-guide.md` + `references/hooks/tension-building.md`
-- 副本+团战 → 加载 `references/hooks/dungeon-design.md` + `references/hooks/team-dynamics.md`
-
-### 2.1.1 场景检测兜底机制
-
-当场景类型**无法识别**时（大纲关键词不匹配上表任何类型）：
-
-- **必须 (MUST)** 默认归类为"日常/叙事场景"
-- **必须 (MUST)** 加载以下基础文件：
-  - `references/guides/language-craft.md`
-  - `references/guides/chapter-micro-structure.md`
-  - `references/quality/ai-guardrails.md`
-- **可以 (MAY)** 询问用户确认场景类型后再加载专项 Hook
-
-### 2.2 流派Hook路由
-
-> 参考 `references/hooks/README.md` 的分类索引
-
-根据**项目流派**（从STATE.md获取），额外加载流派专属Hook：
-
-| 流派 | 核心必读Hook | 辅助Hook |
-|:----|:------------|:---------|
-| **系统流/LitRPG** | `system-panel.md`, `gamification.md`, `game-mechanics.md` | `gold-finger-design.md`, `level-design.md` |
-| **凡人流/修仙** | `power-system.md`, `resource-economy.md`, `auction-house.md` | `master-disciple.md`, `faction-design.md` |
-| **悬疑/推理/克苏鲁** | `suspense-building.md`, `clue-dropping.md`, `logical-twist.md` | `unknown-fear.md`, `sanity-check.md` |
-| **民俗志怪恐怖** | `folk-customs.md`, `ritual-horror.md`, `unknown-fear.md` | `clue-dropping.md`, `tension-building.md` |
-| **言情/古言/宫斗** | `romance-triggers.md`, `emotional-buildup.md`, `dialogue-subtext.md` | `betrayal-impact.md`, `culture-customs.md` |
-| **电竞/竞技/体育** | `game-mechanics.md`, `match-commentary.md`, `match-tension.md` | `rivalry-dynamics.md`, `training-montage.md` |
-| **直播文/国运文** | `hooks/audience-reaction.md`, `hooks/danmu-reaction.md`, `hooks/national-pride.md` | `hooks/face-slapping.md`, `hooks/misunderstanding.md` |
-| **赛博朋克/科幻** | `high-tech-low-life.md`, `tech-description.md` | `scientific-research.md`, `survival-guide.md` |
-| **种田/领主/基建** | `kingdom-building.md`, `resource-management.md` | `trade-routes.md`, `resource-economy.md` |
-| **无限流/综漫** | `hooks/world-hopping.md`, `hooks/dungeon-design.md` | `hooks/tension-building.md`, `hooks/team-dynamics.md` |
-
-### 2.3 Engine Module路由表
-
-根据**金手指/玩法类型**（从策划书/世界观获取），加载引擎模块：
-
-#### Engine 推断规则
-
-- **必须 (MUST)** 优先读取策划书（`00-策划书.md`）中的"金手指"章节来确定 Engine 类型
-- 无 Engine 描述 → 跳过 Engine 路由，使用传统叙事模式
-- **禁止 (MUST NOT)** 在策划书未明确描述时随意猜测 Engine 类型
-- **可以 (MAY)** 询问用户确认 Engine 类型
-
-| 玩法类型 | Engine文件 |
-|:--------|:----------|
-| 签到/打卡系统 | `engine-modules/sign-in-system.md` |
-| 抽卡/转盘系统 | `engine-modules/draw-card.md` |
-| 宠物/御兽系统 | `engine-modules/pet-system.md` |
-| 种田/基建系统 | `engine-modules/infrastructure-farming.md` |
-| 聊天群/论坛系统 | `engine-modules/chat-group.md` |
-| 拍卖行机制 | `engine-modules/auction-house.md` |
-| 爷爷/老祖系统 | `engine-modules/grandfather.md` |
-| 战神回归系统 | `engine-modules/god-of-war.md` |
-| 娱乐明星系统 | `engine-modules/entertainment-star.md` |
-| 赛博跑者系统 | `engine-modules/cyberpunk-runner.md` |
-| 无限流副本 | `engine-modules/infinite-flow.md` |
-| 快穿系统 | `engine-modules/quick-transmigration.md` |
-| 团宠/萌宝系统 | `engine-modules/group-pet-baby.md` |
-| 假千金/真千金 | `engine-modules/fake-heiress.md` |
-| 火葬场/追妻 | `engine-modules/crematorium.md` |
-| 宅斗/宫斗机制 | `engine-modules/house-conflict.md` |
-| 医妃/药妃系统 | `engine-modules/medical-consort.md` |
-| 女仙侠系统 | `engine-modules/female-xianxia.md` |
-
-### 2.4 章节结构选择
-
-> 参考 `references/guides/chapter-micro-structure.md`
-
-根据本章场景类型，选择章节骨架模板：
-
-| 场景类型 | 推荐结构 |
-|:--------|:---------|
-| 打脸/逆袭 | **打脸章**：压抑→转机→爆发→余韵 |
-| 探索/解谜 | **探索章**：困惑→探索→惊吓→逃离 |
-| 感情/日常 | **感情章**：氛围→互动→波折→升华 |
-| 通用 | **标准章**：开篇钩子(5%)→铺垫阻力(30%)→高潮转折(50%)→结尾钩子(15%) |
-
-### 2.5 语言规范激活
-
-- [ ] 加载 `references/guides/language-craft.md` 核心原则
-  - 节奏控制（长短句交替）
-  - 动词优先（精准有力的动词替代形容词堆砌）
-  - 留白技巧（不说满）
-- [ ] 加载 `references/quality/ai-guardrails.md` 禁用词清单
-  - 绝对禁用词：此外、然而、非常、值得注意的是...
-  - 禁用句式：一丝...、不禁...、缓缓地...
-- [ ] 加载 `references/guides/show-dont-tell.md` 展示原则
-- [ ] 加载流派范文 → 激活风格模仿
-
----
-
-## Phase 3：写作执行 (Writing Execution)
-
-### 3.1 标准章节骨架
-
-> 参考 `references/guides/chapter-micro-structure.md`
-
-```
-[1] 开篇钩子 (前5% ≈ 150字)
-    ├─ In Medias Res / 悬念切入 / 反常切入
-    ├─ 禁止：天气描写、起床、世界观大段介绍
-    └─ 参考：references/guides/hook-techniques.md（10种经典钩子）
-
-[2] 铺垫与阻力 (30% ≈ 900字)
-    ├─ 情境建立（谁、在哪、要做什么）
-    ├─ 阻力出现（敌人/环境/规则）
-    └─ 尝试与失败（第一招失败，情况变糟）
-
-[3] 高潮与转折 (50% ≈ 1500字)
-    ├─ 核心冲突（本章最激烈时刻）
-    ├─ 主动时刻（主角必须主动做点什么）
-    └─ 信息揭示（读者获得新的剧情碎片）
-
-[4] 结尾钩子 (后15% ≈ 450字)
-    ├─ 选择一种悬念：危机/信息/选择
-    ├─ 参考：references/guides/hook-techniques.md
-    └─ 确保读者想看下一章
-```
-
-### 3.2 写作规范
-
-- **节奏控制**：动作戏=短句密集；情感戏=慢镜头长句
-- **五感沉浸**：每个重要场景至少调动3种感官（参考 `scenes/sensory-library.md`）
-- **对话潜台词**：角色不会把心里话全说出来
-- **展示不告知**：永远不写"他很愤怒"，要写"他的指节捏得发白"
-- **禁用AI词汇**：严格遵守 `ai-guardrails.md` 的禁用清单
-
----
-
-## Phase 4：三级质检 (Three-Level QA)
-
-**🤖 AI指令**：章节完成后，**立即**执行质检，**不要等用户要求**。
-
-### L1：快速检查（必须 MUST | ~2分钟）
-
-> 每次写完都**必须 (MUST)** 执行，无例外
-
-#### 第1关：AI词汇扫描
-
-扫描生成文本，检测**绝对禁用词汇**：
-
-| 类别 | 禁用词 |
-|:----|:-------|
-| 学术连接词 | 此外、另外、值得注意的是、综上所述、总而言之 |
-| 机械转折 | 句首的"然而"、"但是"、"不过" |
-| 过度强调 | 非常、极其、十分、相当、尤其 |
-| 抽象总结 | 这表明、这意味着、这说明 |
-| AI高频词 | 缓缓、目光、瞬间、不禁、一丝 |
-
-如发现 → 列出位置 + 修改建议
-
-#### 第2关：情绪直给检查
-
-| 禁止（讲述） | 要求（展示） |
-|:------------|:------------|
-| 他很愤怒 | 他握紧拳头，指节发白 |
-| 她很害怕 | 她的瞳孔骤缩，后退一步 |
-| 他很开心 | 他嘴角翘起，露出虎牙 |
-| 他很紧张 | 他反复捏着衣角 |
-
-#### 第3关：对话个性化
-
-- [ ] 遮住角色名，能分辨谁在说话吗？
-- [ ] 是否有潜台词？（角色不会把心里话全说出来）
-- [ ] 是否过度礼貌？（真实对话比书面语粗糙）
-
----
-
-### L2：完整质检（应当 SHOULD | ~5分钟）
-
-> 参考 `references/quality/quality-checklist.md` 的完整清单（263行/80分制）
 
 **评分表**（每项1-10分）：
 
@@ -352,14 +112,14 @@
 
 | 文件 | 更新内容 |
 |:----|:---------|
-| `07-项目状态.md` (STATE.md) | 当前章节+1、场景类型、总字数累计 |
+| `00-全局设定/07-项目状态.md`（旧版为 `07-项目状态.md`） (STATE.md) | 当前章节+1、场景类型、总字数累计 |
 | `.context/VOLUME_XX.md` | 章节状态：⏳ → ✅，更新剧情摘要 |
 | `03-分章细纲.md` | 标记本章完成，填写实际摘要（如与计划有偏差，记录偏差） |
-| `04-伏笔追踪表.md` | 标记已揭示的伏笔、添加新埋的伏笔 |
-| `05-时间线.md` | 添加本章时间节点和事件 |
-| `06-细节追踪表.md` | 更新人物/物品/地点的状态变化（`08-素材碎片.md` 仅作可选补充） |
+| `00-全局设定/04-伏笔追踪表.md`（旧版为 `04-伏笔追踪表.md`） | 标记已揭示的伏笔、添加新埋的伏笔 |
+| `00-全局设定/05-时间线.md`（旧版为 `05-时间线.md`） | 添加本章时间节点和事件 |
+| `00-全局设定/06-细节追踪表.md`（旧版为 `06-细节追踪表.md`） | 更新人物/物品/地点的状态变化（`08-素材碎片.md` 仅作可选补充） |
 
-> SSOT 规则：运行时状态以 `.context/` 为准；根目录 `00-07` 建议通过 `tools/sync_project_views.py` 进行衍生同步。
+> SSOT 规则：运行时状态以 `.context/` 为准；衍生视图建议通过 `tools/sync_project_views.py` 同步到 `03-分章细纲.md` + `00-全局设定/`（旧版为根目录平铺）。
 
 ### 5.2 一致性校验
 
@@ -451,3 +211,4 @@
 
 **⚠️ 最后提醒**：此文档不是"建议"，是**必须 (MUST) 执行的协议**。
 **每一次写作都必须 (MUST) 走完 Phase 1-5 全流程。不走全流程 = 不合格。**
+

@@ -10,7 +10,8 @@
 ## 读取
 1. `novels/{{NOVEL_NAME}}/drafts/chapter_{{CHAPTER_NUM_PADDED}}.md`
 2. `novels/{{NOVEL_NAME}}/.context/critic_notes.md`
-3. `references/quality/ai-guardrails.md`
+3. `novels/{{NOVEL_NAME}}/.context/aesthetic-charter.md`（**最终风格定稿依据**）
+4. `references/quality/ai-guardrails.md`
 
 ## 严格输出协议（JSON-Only）
 - 目标文件：`novels/{{NOVEL_NAME}}/.context/polisher_result.json`

@@ -7,11 +7,15 @@
 2. 本提示词诊断契约
 3. 表达风格偏好
 
-## 读取
-1. `novels/{{NOVEL_NAME}}/drafts/chapter_{{CHAPTER_NUM_PADDED}}.md`
-2. `novels/{{NOVEL_NAME}}/.context/chapter_brief.md`
-3. `novels/{{NOVEL_NAME}}/04-伏笔追踪表.md`
-4. `novels/{{NOVEL_NAME}}/05-时间线.md`
+## 读取（诊断基准）
+1. **内容层**：
+   - `novels/{{NOVEL_NAME}}/drafts/chapter_{{CHAPTER_NUM_PADDED}}.md`
+   - `novels/{{NOVEL_NAME}}/.context/chapter_brief.md`
+   - `novels/{{NOVEL_NAME}}/.context/STORY_SO_FAR.md`
+   - `novels/{{NOVEL_NAME}}/.context/aesthetic-charter.md`（**风格一致性诊断必读**）
+2. **追踪层**：
+   - `novels/{{NOVEL_NAME}}/00-全局设定/04-伏笔追踪表.md`
+   - `novels/{{NOVEL_NAME}}/00-全局设定/05-时间线.md`
 
 ## 输出
 - 写入：`novels/{{NOVEL_NAME}}/.context/critic_notes.md`
@@ -43,3 +47,4 @@
 - 只诊断，不改正文。
 - 每个问题都要给出可执行修改方向。
 - 若检测到一致性硬伤，`hard_issues` 必须 > 0。
+

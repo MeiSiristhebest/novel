@@ -8,10 +8,11 @@
 3. 风格偏好
 
 ## 必读输入
-1. `novels/{{NOVEL_NAME}}/00-策划书.md`
-2. `novels/{{NOVEL_NAME}}/03-分章细纲.md`
-3. `novels/{{NOVEL_NAME}}/07-项目状态.md`（如存在）
-4. `novels/{{NOVEL_NAME}}/.context/PROGRESS.md`（如存在）
+1. `novels/{{NOVEL_NAME}}/00-全局设定/00-策划书.md`（高层指令）
+2. `novels/{{NOVEL_NAME}}/00-全局设定/07-项目状态.md`（进度基准）
+3. `novels/{{NOVEL_NAME}}/03-分章细纲.md`（或分卷细纲索引）
+4. `novels/{{NOVEL_NAME}}/.context/STORY_SO_FAR.md`（全书连贯性记忆）
+5. `novels/{{NOVEL_NAME}}/.context/PROGRESS.md`
 
 ## 必做输出（仅写这些）
 1. `novels/{{NOVEL_NAME}}/.context/scene_list.json`
@@ -34,7 +35,7 @@
 
 ## PLATFORM_STRATEGY_CARD 规则（必须）
 - 目标：把平台偏好固化成 <=12 行的硬约束，供后续 Writer/QA 直接引用。
-- 若 `00-策划书.md` 中能识别目标平台（起点/番茄/晋江/飞卢）：
+- 若 `00-全局设定/00-策划书.md`（若不存在则回退 `00-策划书.md`） 中能识别目标平台（起点/番茄/晋江/飞卢）：
   - 必须参考 `references/guides/platform-playbook-cn.md`，生成《平台策略卡》。
 - 若无法识别平台：生成占位卡，第一行写 `目标平台：N/A`，并在末尾写明“后续确认平台后需重建”。
 
@@ -57,3 +58,4 @@
   "message": "initializer completed"
 }
 ```
+

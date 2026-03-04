@@ -7,14 +7,22 @@
 2. 本提示词的判定与输出契约
 3. 风格与表达偏好
 
-## 读取
-1. `novels/{{NOVEL_NAME}}/drafts/chapter_{{CHAPTER_NUM_PADDED}}.md`
-2. `novels/{{NOVEL_NAME}}/.context/scene_list.json`
-2.1 `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（如存在）
-3. `novels/{{NOVEL_NAME}}/04-伏笔追踪表.md`
-4. `novels/{{NOVEL_NAME}}/05-时间线.md`
-5. `novels/{{NOVEL_NAME}}/06-细节追踪表.md`（必须存在；缺失则阻断）
-6. `references/quality/ai-guardrails.md`
+## 读取（多维一致性审计源）
+1. **硬核标准**：
+   - `novels/{{NOVEL_NAME}}/00-全局设定/01-世界观圣经.md`（**绝对禁忌审计**）
+   - `novels/{{NOVEL_NAME}}/.context/aesthetic-charter.md`（**基调红线：故障美学/黑色幽默**）
+2. **逻辑追踪**：
+   - `novels/{{NOVEL_NAME}}/.context/STORY_SO_FAR.md`（剧情连贯性审计）
+   - `{{CURRENT_VOLUME_FILE}}`（本卷任务对齐）
+3. **动态细节**：
+   - `novels/{{NOVEL_NAME}}/00-全局设定/04-伏笔追踪表.md`
+   - `novels/{{NOVEL_NAME}}/00-全局设定/05-时间线.md`
+   - `novels/{{NOVEL_NAME}}/00-全局设定/06-细节追踪表.md`（节点对齐）
+4. **任务指令**：
+   - `novels/{{NOVEL_NAME}}/drafts/chapter_{{CHAPTER_NUM_PADDED}}.md`（审计对象）
+   - `novels/{{NOVEL_NAME}}/.context/scene_list.json`
+   - `novels/{{NOVEL_NAME}}/.context/PLATFORM_STRATEGY_CARD.md`（平台合规性审计）
+   - `references/quality/ai-guardrails.md`
 
 
 ## 平台适配审计（必须写入 evidence）

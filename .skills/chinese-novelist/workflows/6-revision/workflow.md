@@ -42,13 +42,13 @@ To proceed to the next stage, the following must be true (publish-ready):
 
 1. Volume QC coverage is complete:
 - every chapter in the volume has been reviewed for structure + logic + consistency
-- key checks are recorded somewhere persistent (recommended: `.context/VOLUME_XX.md` + `07-项目状态.md`), not only in chat
+- key checks are recorded somewhere persistent (recommended: `.context/VOLUME_XX.md` + `00-全局设定/07-项目状态.md`), not only in chat
 2. Quality gates are cleared for Chinese web-serial context:
 - L1 issues are cleared (AI taste, abstract telling, repetitive sentence patterns, flat dialogue)
 - the chapter meets the score thresholds in `references/quality/quality-checklist.md` and `references/quality/genre-quality-checklist.md`
 - `references/quality/ai-guardrails.md` is satisfied (no forbidden patterns)
 3. Consistency does not regress:
-- `04-伏笔追踪表.md`, `05-时间线.md`, `06-细节追踪表.md` are updated to reflect any revisions.
+- `00-全局设定/04-伏笔追踪表.md`, `00-全局设定/05-时间线.md`, `00-全局设定/06-细节追踪表.md` are updated to reflect any revisions.
 
 ---
 
@@ -59,7 +59,7 @@ After completion: `7-feedback`
 ## Required Reads
 
 - Completed chapters `drafts/chapter_XX.md`
-- `04-伏笔追踪表.md`, `05-时间线.md`, `06-细节追踪表.md` (consistency)
+- `00-全局设定/04-伏笔追踪表.md`, `00-全局设定/05-时间线.md`, `00-全局设定/06-细节追踪表.md` (consistency)
 - `references/quality/quality-checklist.md` + `references/quality/genre-quality-checklist.md`
 
 ## Outputs (Write/Update)
@@ -95,5 +95,6 @@ pwsh -File .skills/chinese-novelist/tools/run-novel-automation.ps1 -Novel "<Nove
 # From repo root
 bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer-qa 1 true true 1 claude sonnet "" OPENAI_API_KEY "" false true
 ```
+
 
 

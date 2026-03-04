@@ -97,3 +97,4 @@ bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer
 ```
 
 
+

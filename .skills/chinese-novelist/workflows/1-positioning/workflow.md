@@ -30,15 +30,15 @@
 
 To proceed to the next stage, the following must be true (human-checkable, and runner-friendly):
 
-1. `00-策划书.md` has explicit, copy-pastable facts (do not keep them only in chat):
+1. `00-全局设定/00-策划书.md` has explicit, copy-pastable facts (do not keep them only in chat):
 - target readers + platform
 - genre keyword(s) (must include the Chinese keyword you want detection to hit)
 - 1-2 core selling points
 - 2-3 reference works
 2. Engine decision is explicit:
-- either an engine/module keyword is written into `00-策划书.md` or `01-世界观圣经.md`
+- either an engine/module keyword is written into `00-全局设定/00-策划书.md` or `00-全局设定/01-世界观圣经.md`
 - or it is explicitly marked as none (so later routing does not "guess")
-3. If you intend to use a deterministic style exemplar, record the chosen exemplar filename under `references/style-exemplars/` in `00-策划书.md` (so prompts can load it without sampling).
+3. If you intend to use a deterministic style exemplar, record the chosen exemplar filename under `references/style-exemplars/` in `00-全局设定/00-策划书.md` (so prompts can load it without sampling).
 
 ---
 
@@ -50,18 +50,18 @@ After completion: `2-characters`
 
 - `references/templates/genre_registry_v3.json` (genre list + style exemplar SSOT)
 - `references/project-structure.md` (project files you will write)
-- If the project already exists: `00-策划书.md` and `01-世界观圣经.md`
+- If the project already exists: `00-全局设定/00-策划书.md` and `00-全局设定/01-世界观圣经.md`
 
 ## Outputs (Write/Update)
 
-- `00-策划书.md` must explicitly record:
+- `00-全局设定/00-策划书.md` must explicitly record:
   - target readers + platform
   - genre keyword(s) (must include the Chinese keyword used for detection)
   - core selling points (1-2)
   - reference works (2-3)
   - goldfinger / engine (optional)
 
-> Note: the runner detects genre/engine from `00-策划书.md` and `01-世界观圣经.md`. Do not keep these only in chat.
+> Note: the runner detects genre/engine from `00-全局设定/00-策划书.md` and `00-全局设定/01-世界观圣经.md`. Do not keep these only in chat.
 
 ## Gates & Validation
 
@@ -69,8 +69,8 @@ After completion: `2-characters`
 
 ## DoD (Definition of Done)
 
-- Genre chosen and written into `00-策划书.md` using an explicit keyword
-- Engine choice written into `00-策划书.md` (or explicitly marked as none)
+- Genre chosen and written into `00-全局设定/00-策划书.md` using an explicit keyword
+- Engine choice written into `00-全局设定/00-策划书.md` (or explicitly marked as none)
 - 1-2 selling points + 2-3 reference works recorded
 
 ## Commands (Optional)
@@ -90,5 +90,6 @@ pwsh -File .skills/chinese-novelist/tools/run-novel-automation.ps1 -Novel "<Nove
 # From repo root
 bash .skills/chinese-novelist/tools/run-novel-automation.sh "<NovelName>" writer-qa 1 true true 1 claude sonnet "" OPENAI_API_KEY "" false true
 ```
+
 
 
