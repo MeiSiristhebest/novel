@@ -1,0 +1,4 @@
+[submodule "novels/narrative-invasion"]
+	path = novels/narrative-invasion
+	url = D:/developWorkPlaces/alma/novel/.submodules-remotes/narrative-invasion.git
+	branch = main
