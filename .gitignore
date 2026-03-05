@@ -3,7 +3,7 @@
 
 # Allow repo metadata
 !.gitignore
-
+!.gitmodules
 # Allow prompt-only skill pack
 !.skills/
 !.skills/chinese-novelist/
@@ -39,3 +39,4 @@
 **/__pycache__/
 **/*.pyc
 **/*.bak-*
+
