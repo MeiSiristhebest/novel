@@ -7,7 +7,7 @@
 1. `.context/scene_list.json`
 2. `.context/STATE.md`
 3. `.context/RUNNER_STATE.json`
-4. 当前章节相关素材（`03-分章细纲.md`、`04-伏笔追踪表.md`、`05-时间线.md`、`06-细节追踪表.md`）
+4. 当前章节相关素材（`03-分章细纲.md`、`00-全局设定/04-伏笔追踪表.md`、`00-全局设定/05-时间线.md`、`00-全局设定/06-细节追踪表.md`）
 5. （可选/推荐）`.context/PLATFORM_SNAPSHOT.md`（仅当本轮要生成/更新《平台策略卡》或讨论“最新榜单/当前风向/总榜Top”时必须提供）
 6. （可选/推荐）`.context/PLATFORM_POLICY_SNAPSHOT.md`（仅当本轮要生成/更新《平台策略卡》或讨论“平台是否反AI/如何审核/合规口径”时必须提供）
 7. （可选/推荐）`.context/PLATFORM_STRATEGY_CARD.md`（若目标平台已明确则必须提供）

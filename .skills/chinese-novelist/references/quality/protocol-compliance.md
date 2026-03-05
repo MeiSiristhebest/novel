@@ -1,9 +1,9 @@
-# AI全流程写作协议 v2.1 (Full-Pipeline Writing Protocol)
+# AI全流程写作协议 v2.3 (Universal Pipeline Protocol)
 
 > **维护者**：Chinese Novelist Pro Team
-> **适用范围**：写作主流程 Phase 0-5 协议
+> **适用范围**：写作主流程 Phase 0-5 协议 (v6.3.1 兼容)
 > **状态**：Active (SSOT)
-> **最后校验**：2026-03-01
+> **最后校验**：2026-03-05
 
 > **🤖 AI系统指令**：本文档是**唯一的全流程主控协议 (SSOT)**。
 > 每次写作会话**必须 (MUST)** 按照本文档的 Phase 0-5 顺序执行，**禁止 (MUST NOT)** 跳过任何 Phase。
@@ -12,12 +12,13 @@
 
 ---
 
-## 路径约定（统一新版）
+## 路径约定 (Hierarchical Layout & Sliding Window)
 
-本技能库 **仅支持新版工程布局**（根目录平铺布局已弃用）。约定如下：
+本技能库 **仅支持新版工程布局** 并且全面兼容多卷分层架构。约定如下：
 
 - 全局设定根视图：`novels/[书名]/00-全局设定/`
   - `00-策划书.md` / `01-世界观圣经.md` / `02-人设档案.md` / `04-伏笔追踪表.md` / `05-时间线.md` / `06-细节追踪表.md` / `07-项目状态.md`
+- 当前卷滑动窗口视图：`novels/[书名]/[当前卷目录]/[大纲文件].md`
 - 章节总纲索引：`novels/[书名]/03-分章细纲.md`（由 `.context/scene_list.json` 同步衍生）
 - 运行时单一真相源（SSOT）：`novels/[书名]/.context/`（尤其 `STATE.md`、`scene_list.json`、`VOLUME_XX.md`、`RUNNER_STATE.json`）
 
@@ -56,13 +57,55 @@
 
 ---
 
-## Phase 1：上下文加载 (Context Loading)
+## Phase 1：上下文加载 (Context Loading - Sliding Window)
 
-### 1.0 平台对齐（若已明确平台，必须）
+**逻辑**：采用“从大/全局 到 小/局部”的动态过滤逻辑，通过多文件夹扫描加载相关本章的必要上下文。
+
+### 1.1 环境变量加载
+- [ ] 读取 `.context/STATE.md` + `00-全局设定/07-项目状态.md` → 确定当前位置。
+- [ ] 加载 `novels/[书名]/[当前卷目录]/[当前大纲].md` 或 `.context/VOLUME_XX.md` → 确定本卷弧线任务。
+
+### 1.2 全局与细节映射
+- [ ] 读取 `00-全局设定/` 下项目所有定义的核心文件（如世界观设定、角色一览）。
+- [ ] 读取 `00-全局设定/04-伏笔追踪表.md` → 识别待回收及待埋伏笔。
+- [ ] 读取 `00-全局设定/05-时间线.md` + `06-细节追踪表.md` → 确保时空连续性。
+
+### 1.3 平台对齐（若已明确平台，必须）
 - [ ] 读取 `.context/PLATFORM_STRATEGY_CARD.md`（平台硬约束）
-- [ ] 读取 `.context/PLATFORM_SNAPSHOT.md`（榜单快照证据，缺失则阻断）
-- [ ] 读取 `.context/PLATFORM_POLICY_SNAPSHOT.md`（政策快照证据，缺失则阻断）
+- [ ] 读取 `.context/PLATFORM_SNAPSHOT.md`（榜单快照证据）
+- [ ] 读取 `.context/PLATFORM_POLICY_SNAPSHOT.md`（政策快照证据）
 
+---
+
+## Phase 2：三层路由 (Routing)
+
+### 2.1 场景路由
+- [ ] 识别场景类型（打斗/感情/对话/环境/副本/群像）。
+- [ ] 加载 `references/scenes/` 对应的技法指南。
+
+### 2.2 流派与引擎路由
+- [ ] 加载 `references/style-exemplars/` 范文。
+- [ ] 激活 Engine Module（如算力监测、代码掠夺等项目特定机制，通过世界观文件识别）。
+
+---
+
+## Phase 3：写作执行 (Execution)
+
+### 3.1 语言规范激活
+- [ ] 挂载 `references/quality/ai-guardrails.md`。
+- [ ] 调用 `references/guides/language-craft.md` 消除 AI 腔。
+
+---
+
+## Phase 4：质量控制 (Quality Control)
+
+### L1：核心规范（强制 MUST）
+- [ ] **AI词汇扫描**：检查烂俗转折词等。
+- [ ] **情绪直给检查**：检查是否用了“展示而非讲述”。
+- [ ] **对话个性化检查**：角色发音是否符合档案。
+- [ ] **动态专项质检**：基于项目约束条件（如群像剧的高光密度检查，通过提取 `00-全局设定/00-策划书.md` 动态应用）。
+
+### L2：80分全维评估（建议 SHOULD）
 **评分表**（每项1-10分）：
 
 | 维度 | 评分 | 说明 |
