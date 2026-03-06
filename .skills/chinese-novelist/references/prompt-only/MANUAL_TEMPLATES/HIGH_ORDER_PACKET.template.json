@@ -1,0 +1,14 @@
+{
+  "chapter_id": "CH03",
+  "chapter_num": 3,
+  "high_order_required": true,
+  "high_order_triggers": [
+    "golden_chapter",
+    "novelty_fatigue"
+  ],
+  "novelty_lab": null,
+  "reader_psychology_model": null,
+  "ruthless_cut_review": null,
+  "character_pressure_test": null,
+  "live_signal_decision": null
+}

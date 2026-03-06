@@ -1,0 +1,14 @@
+{
+  "chapter_id": "CH03",
+  "chapter_num": 3,
+  "strategic_required": true,
+  "strategic_triggers": [
+    "golden_chapter",
+    "voice_control"
+  ],
+  "market_bet": null,
+  "chief_editor_report": null,
+  "story_decisions": null,
+  "feedback_triage": null,
+  "voice_audit": null
+}
