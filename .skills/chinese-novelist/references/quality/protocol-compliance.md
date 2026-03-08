@@ -97,6 +97,17 @@
 ### 3.1 语言规范激活
 - [ ] 挂载 `references/quality/ai-guardrails.md`。
 - [ ] 调用 `references/guides/language-craft.md` 消除 AI 腔。
+- [ ] 全局挂载 `.context/writing_philosophy.md`。
+
+### 3.2 写作心流构建 (Flow State Pre-computation)
+**🧠 AI 强制指令**：在输出任何正文之前，必须在 `<thinking>` 标签中输出以下思考（建立心流）：
+1. 确定本段落/章节的情绪水位线（平静/紧张/爆发/余韵）。
+2. POV主角当前的底层欲望与核心压力是什么？
+3. 如何利用不合理（Anti-Logic）或留白制造反差感？
+4. 确认接下来的行文节奏（该Tell还是该Show）。
+
+### 3.3 动笔执行
+- [ ] 根据以上心流状态，自然地流淌出正文，忘掉机械的指标，相信直觉。
 
 ---
 

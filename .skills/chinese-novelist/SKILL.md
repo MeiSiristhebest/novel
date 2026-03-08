@@ -121,6 +121,7 @@ Phase 5 → 更新状态文件 (每次 MUST)
 | 完整协议 | `references/quality/protocol-compliance.md` |
 | AI防护栏 | `references/quality/ai-guardrails.md` |
 | 语言锤炼 | `references/guides/language-craft.md` |
+| **消除AI味武器库** | **`references/guides/anti-ai-taste.md`** |
 | 章节结构 | `references/guides/chapter-micro-structure.md` |
 | 质检清单 | `references/quality/quality-checklist.md` |
 | 一致性引擎 | `references/guides/consistency-engine.md` |
@@ -171,6 +172,7 @@ Phase 5 → 更新状态文件 (每次 MUST)
 | "非脚本模式" / "纯Prompt模式" / "手动闭环" | → 进入【Prompt-Only 模式】，读取 `references/prompt-only/MASTER_ORCHESTRATOR.md` 并按 `SOP_MANUAL_RUN.md` 执行 |
 | "写第X章" / "继续写" / "开始正文" | → 进入【写作模式】，执行 Phase 1-5 全流程 |
 | "质检" / "检查" / "分析这章" | → 进入【质检模式】，分析文本并给出建议 |
+| "去AI味" / "消除AI味" / "太AI了" / "人类写作指纹" | → **必须 (MUST)** 读取 `references/guides/anti-ai-taste.md`，对照十二条军规逐条检查 |
 | "审稿" / "主编意见" | → 读取 `references/prompts/chief-editor.md` 生成审稿信 |
 | "读者评论" / "评论预测" | → 读取 `references/prompts/reader-simulator.md` 生成仿真评论 |
 | "帮助" / "怎么用" / "有什么功能" | → 展示系统能力概览和使用指南 |
@@ -396,6 +398,7 @@ Phase 5 → 更新状态文件 (每次 MUST)
 | 技法 | 必须 (MUST) 读取 |
 |:-----|:----------------|
 | 展示不告知 | `guides/show-dont-tell.md` |
+| **消除AI味（实证武器库）** | **`guides/anti-ai-taste.md`** |
 | 情感共鸣 | `guides/emotional-resonance.md` |
 | 模仿/借鉴 | `guides/creative-imitation.md` |
 | 剧情卡文 | `guides/plot-patterns.md` |
